@@ -54,17 +54,10 @@
    ========================================================= */
 
 body {
-    background:
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(36, 92, 150, 0.16),
-            transparent 35%
-        ),
-        radial-gradient(
-            circle at 85% 70%,
-            rgba(255, 121, 1, 0.08),
-            transparent 30%
-        ),
-        var(--main-background-color);
+    background-color: #050b14;
+    background-image: url("../img/nebulabackground.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
     background-attachment: fixed;
 }
