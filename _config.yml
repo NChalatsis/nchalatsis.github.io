@@ -39,13 +39,13 @@ hero_cover_img: sample_cover.jpg # replace this for changing homepage cover (eg.
 
 # Experiences
 author_work_experiences:
-            - company_name: Google
-              company_logo: google.png
-              company_url: https://google.com
-              designation: Software Engineer
-              description: Worked on various Google Products
+            - company_name: PeopleCert Global Services S.A.
+              company_logo: peoplecert.png
+              company_url: https://www.peoplecert.org
+              designation: Junior Data Engineer
+              description: Contributing to reliable data workflows and data solutions.
               visibility: true
-            - company_name: Microsoft
+            - company_name: Demo Corp
               company_logo: microsoft.png
               company_url: https://microsoft.com
               designation: Azure Developer
