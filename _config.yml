@@ -45,12 +45,6 @@ author_work_experiences:
               designation: Junior Data Engineer
               description: Contributing to reliable data workflows and data solutions.
               visibility: true
-            - company_name: Demo Corp
-              company_logo: microsoft.png
-              company_url: https://microsoft.com
-              designation: Azure Developer
-              description: Worked on various Azure Cloud Products
-              visibility: true
 
 # Education
 author_education_details:
