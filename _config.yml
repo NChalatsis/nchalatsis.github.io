@@ -28,7 +28,7 @@ urls:
 
 # Edit Author details (For multi authors check _data/authors.yml)
 
-author_logo: profile.png
+author_logo: photoprofchalsm.png
 author: Nikolaos Chalatsis
 author_bio: Data Engineer focused on Python, SQL, data pipelines, and building reliable data solutions.
 author_email: "nik_chal@live.com"
