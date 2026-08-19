@@ -12,8 +12,16 @@ urls:
       url: /
     - text: About
       url: /about
+    - text: Experience
+      url: /experience
     - text: Projects
       url: /projects
+    - text: Education
+      url: /education
+    - text: Certifications
+      url: /certifications
+    - text: Courses
+      url: /courses
     - text: Contact
       url : /contact
 
