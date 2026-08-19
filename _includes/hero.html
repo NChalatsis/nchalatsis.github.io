@@ -1,9 +1,20 @@
 <style>
 .jumbotron {
-    background-color: var(--main-background-color) !important;
+    background-color: transparent !important;
     background-image: none !important;
     text-align: center;
-    padding: 110px 20px 90px;
+    padding: 100px 20px 80px;
+}
+
+.hero-avatar {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin-bottom: 28px;
+    border: 3px solid rgba(255, 121, 1, 0.85);
+    box-shadow: 0 0 30px rgba(36, 92, 150, 0.25);
 }
 
 .jumbotron-heading {
@@ -33,10 +44,38 @@
 .jumbotron-btns a {
     margin: 5px;
 }
+
+@media (max-width: 576px) {
+    .jumbotron {
+        padding: 75px 15px 60px;
+    }
+
+    .hero-avatar {
+        width: 125px;
+        height: 125px;
+    }
+
+    .jumbotron-heading {
+        font-size: 36px;
+    }
+
+    .jumbotron .lead {
+        font-size: 22px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+}
 </style>
 
-<!-- Personal hero section -->
 <div class="jumbotron">
+
+    <img
+        class="hero-avatar"
+        src="{{site.url}}{{site.baseurl}}/assets/img/avatar.png"
+        alt="Nikolaos Chalatsis"
+    >
 
     <p class="jumbotron-heading">
         Hi, I'm Nikolaos Chalatsis.
@@ -52,11 +91,17 @@
     </p>
 
     <div class="jumbotron-btns">
-        <a href="{{site.url}}{{site.baseurl}}/projects/" class="btn btn-md btn-warning">
+        <a
+            href="{{site.url}}{{site.baseurl}}/projects/"
+            class="btn btn-md btn-warning"
+        >
             View Projects
         </a>
 
-        <a href="{{site.url}}{{site.baseurl}}/contact/" class="btn btn-md btn-default">
+        <a
+            href="{{site.url}}{{site.baseurl}}/contact/"
+            class="btn btn-md btn-default"
+        >
             Contact Me
         </a>
     </div>
