@@ -1,0 +1,16 @@
+.built-by-badge {
+    position: fixed;
+    left: 18px;
+    bottom: 18px;
+    z-index: 9999;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: rgba(20, 20, 20, 0.9);
+    color: #d0d0d0;
+    font-size: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.built-by-badge strong {
+    color: #ffffff;
+}
