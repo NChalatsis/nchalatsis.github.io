@@ -24,3 +24,47 @@
 .built-by-badge strong {
     color: #ffffff;
 }
+
+/* =========================================================
+   Site Layout
+   ========================================================= */
+
+.site-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+    .site-container {
+        padding: 0 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .site-container {
+        padding: 0 18px;
+    }
+}
+
+/* =========================================================
+   Background
+   ========================================================= */
+
+body {
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(36, 92, 150, 0.16),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(255, 121, 1, 0.08),
+            transparent 30%
+        ),
+        var(--main-background-color);
+    background-attachment: fixed;
+}
