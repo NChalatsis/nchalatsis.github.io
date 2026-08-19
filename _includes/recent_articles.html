@@ -1,44 +1,51 @@
 <section id="recent-articles">
-  <div id="recent-articles-header">
-    <div id="recent-articles-title">
-      <h1 class="card-title">Recent Articles</h1>
-    </div>
-    <div id="recent-articles-show-all">
-      <a class="btn btn-lg btn-dark" href="/blog"> View All </a>
-    </div>
-  </div>
-  <br />
-
-  <ul>
-    {% for post in site.posts limit:5 %}
-    <li class="article-card">
-      <a href="{{post.url}}" class="article-card-link">
-        <div id="article-container">
-          <div id="article-img">
-            {% if post.author %}
-              {% assign author = post.author %}
-              {% if author %}
-               {% assign author_data = site.data.authors[author] %}
-               <img
-                src="{{site.url}}{{site.baseurl}}/assets/img/authors/{{author_data.avatar}}"
-                width="50px"
-                height="50px"
-             />
-              {% endif %}
-            {% endif %}
-
-          </div>
-          <div id="article-link">
-              <p class="recent-article-link">{{post.title}} <span style="color: #ccc; font-size: 15px;"> - <i><time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time></i></span></p>
-            </div>
-            <div id="article-alert">
-            {% for cat in post.category limit:1 %}
-             <button class="btn btn-sm btn-dark">{{cat}}</button>
-            {% endfor %}
-            </div>
+    <div class="recent-articles-header">
+        <div class="recent-articles-title">
+            <h1 class="card-title">Selected Projects</h1>
         </div>
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
+    </div>
+
+    <br />
+
+    <div class="project-card">
+        <h2>Discount Calculator</h2>
+        <p>
+            Python project focused on Object-Oriented Programming,
+            abstraction, inheritance, polymorphism, and strategy patterns.
+        </p>
+        <p>
+            <strong>Technologies:</strong> Python, OOP
+        </p>
+        <a href="https://github.com/NChalatsis" target="_blank">
+            View on GitHub
+        </a>
+    </div>
+
+    <div class="project-card">
+        <h2>Media Catalogue</h2>
+        <p>
+            Python project using classes, inheritance, abstraction,
+            polymorphism, exception handling, and data organization.
+        </p>
+        <p>
+            <strong>Technologies:</strong> Python, OOP
+        </p>
+        <a href="https://github.com/NChalatsis" target="_blank">
+            View on GitHub
+        </a>
+    </div>
+
+    <div class="project-card">
+        <h2>Data Engineering Projects</h2>
+        <p>
+            A collection of projects focused on data pipelines,
+            Python, SQL, ETL/ELT, databases, and data processing.
+        </p>
+        <p>
+            <strong>Technologies:</strong> Python, SQL, ETL / ELT
+        </p>
+        <a href="https://github.com/NChalatsis" target="_blank">
+            View on GitHub
+        </a>
+    </div>
 </section>
