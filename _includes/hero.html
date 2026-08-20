@@ -88,6 +88,89 @@
         font-size: 16px;
     }
 }
+    /* =========================================================
+   About popup triggered by avatar click
+   ========================================================= */
+
+.hero-about-wrapper {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto 24px;
+}
+
+.hero-avatar {
+    cursor: pointer;
+}
+
+/* Hidden by default */
+.hero-about-popup {
+    position: absolute;
+    top: calc(100% + 18px);
+    left: 50%;
+    transform: translate(-50%, -8px);
+
+    width: min(560px, 86vw);
+    padding: 26px 28px;
+
+    background: rgba(5, 17, 31, 0.97);
+    border: 1px solid rgba(255, 121, 1, 0.28);
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.45),
+        0 0 24px rgba(36, 92, 150, 0.16);
+
+    color: #e6edf5;
+    text-align: left;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    z-index: 2000;
+
+    transition:
+        opacity 0.22s ease,
+        transform 0.22s ease,
+        visibility 0.22s ease;
+}
+
+.hero-about-popup h2 {
+    margin: 0 0 18px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 28px;
+}
+
+.hero-about-popup p {
+    margin: 0 0 14px;
+    color: #d9e3ee;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.hero-about-wrapper.is-open .hero-about-popup {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+}
+
+@media (max-width: 576px) {
+
+    .hero-about-popup {
+        width: 90vw;
+        padding: 22px;
+    }
+
+    .hero-about-popup h2 {
+        font-size: 24px;
+    }
+
+    .hero-about-popup p {
+        font-size: 15px;
+    }
+}
 </style>
 
 <div class="jumbotron">
@@ -151,3 +234,22 @@
     </div>
 
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const wrapper = document.querySelector(".hero-about-wrapper");
+    const avatar = document.getElementById("heroAvatar");
+
+    if (!wrapper || !avatar) {
+        return;
+    }
+
+    avatar.addEventListener("click", function (event) {
+        event.stopPropagation();
+        wrapper.classList.add("is-open");
+    });
+
+    wrapper.addEventListener("mouseleave", function () {
+        wrapper.classList.remove("is-open");
+    });
+});
+</script>
