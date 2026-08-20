@@ -72,3 +72,19 @@ body {
     max-width: none;
     width: auto;
 }
+
+/* =========================================================
+   Education logo
+   ========================================================= */
+.education-logo,
+.experience-logo {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.education-logo {
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 10px;
+}
