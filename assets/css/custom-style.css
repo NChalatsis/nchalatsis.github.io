@@ -61,3 +61,36 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
+
+/* =========================================================
+   Site Colors
+   ========================================================= */
+
+:root {
+    --site-deep-blue: #071a2f;
+    --site-deep-blue-dark: #05111f;
+    --site-orange: #ff7901;
+}
+
+/* Header */
+#topNav {
+    background-color: var(--site-deep-blue) !important;
+    border-bottom: 1px solid rgba(255, 121, 1, 0.25);
+}
+
+/* Footer */
+footer {
+    background-color: var(--site-deep-blue-dark) !important;
+    color: #dbe7f5;
+}
+
+/* Footer text */
+footer p {
+    color: #dbe7f5;
+}
+
+/* Built & maintained badge */
+.built-by-badge {
+    background: rgba(7, 26, 47, 0.95);
+    border: 1px solid rgba(255, 121, 1, 0.25);
+}
