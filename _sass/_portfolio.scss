@@ -8,3 +8,42 @@
     --portfolio-blue-dark: #05111f;
     --portfolio-orange: #ff7901;
 }
+
+/* =========================================================
+   Typography
+   ========================================================= */
+
+body {
+    color: #e6edf5;
+}
+
+.jumbotron-heading {
+    color: #ffffff !important;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+}
+
+.jumbotron .lead {
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-description {
+    color: #e6edf5 !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+}
+
+#recent-articles,
+#recent-projects {
+    color: #e6edf5;
+}
+
+#recent-articles h1,
+#recent-projects h1,
+.card-title {
+    color: #ffffff !important;
+}
+
+.project-card,
+.project-card p {
+    color: #d9e3ee !important;
+}
