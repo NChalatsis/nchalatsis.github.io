@@ -49,34 +49,26 @@ body {
 }
 
 /* =========================================================
-   About - Wider content
+   About - Wider Education & Experience content
    ========================================================= */
-
-.education-content,
-.experience-content {
-    width: 100%;
-}
 
 .education-entry,
 .experience-entry {
+    display: flex;
+    align-items: flex-start;
     width: 100%;
-}
-
-.education-entry .col-md-6,
-.experience-entry .col-md-6 {
-    width: auto;
-    flex: 1;
-    max-width: none;
+    gap: 24px;
 }
 
 .education-entry .col-md-2,
 .experience-entry .col-md-2 {
-    flex: 0 0 120px;
-    max-width: 120px;
+    flex: 0 0 110px;
+    max-width: 110px;
 }
 
-.education-entry,
-.experience-entry {
-    margin-left: 0;
-    margin-right: 0;
+.education-entry .col-md-6,
+.experience-entry .col-md-6 {
+    flex: 1 1 auto;
+    max-width: none;
+    width: auto;
 }
