@@ -1,0 +1,10 @@
+- university_name: DUTH
+  university_logo: duth.png
+  university_url: https://duth.gr
+  degree: BSc Electrical Engineer
+  period: 2015 - 2020
+
+  description: >
+    Bachelor of Science in Electrical Engineering.
+
+  visibility: true
