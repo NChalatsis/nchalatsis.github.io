@@ -209,9 +209,9 @@ layout: default
 
           {% if education.visibility == true %}
 
-          <div class="row education-entry">
+          <div class="about-data-entry education-entry">
 
-            <div class="col-md-2 education-logo-wrapper">
+            <div class="about-data-logo">
 
               <img
                 src="{{site.url}}{{site.baseurl}}/assets/img/{{ education.university_logo }}"
@@ -221,7 +221,7 @@ layout: default
 
             </div>
 
-            <div class="col-md-10 education-content">
+            <div class="about-data-content">
 
               <h4 class="experience-title">
                 {{ education.degree }}
@@ -274,9 +274,9 @@ layout: default
 
           {% if experience.visibility == true %}
 
-          <div class="row experience-entry">
+          <div class="about-data-entry experience-entry">
 
-            <div class="col-md-2 experience-logo-wrapper">
+            <div class="about-data-logo">
 
               <img
                 src="{{site.url}}{{site.baseurl}}/assets/img/{{ experience.company_logo }}"
@@ -286,7 +286,7 @@ layout: default
 
             </div>
 
-            <div class="col-md-10 experience-content">
+            <div class="about-data-content">
 
               <h4 class="experience-title">
                 {{ experience.designation }}
