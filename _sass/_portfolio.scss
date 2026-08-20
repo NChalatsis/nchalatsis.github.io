@@ -88,3 +88,44 @@ body {
     padding: 8px;
     border-radius: 10px;
 }
+
+/* =========================================================
+   About - Wide Data Entries
+   ========================================================= */
+
+.about-data-entry {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    gap: 28px;
+}
+
+.about-data-logo {
+    flex: 0 0 110px;
+    width: 110px;
+}
+
+.about-data-content {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.education-logo,
+.experience-logo {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.education-logo {
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.about-data-content h4,
+.about-data-content h6,
+.about-data-content p {
+    max-width: none;
+}
