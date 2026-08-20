@@ -1,47 +1,102 @@
+<style>
+.jumbotron {
+    background-color: transparent !important;
+    background-image: none !important;
+    text-align: center;
+    padding: 100px 20px 80px;
+}
+
+.hero-avatar {
+    width: 220px;
+    height: auto;
+    display: block;
+    margin: 0 auto 24px;
+
+    border: none;
+    border-radius: 0;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 18px 22px rgba(0, 0, 0, 0.45))
+        drop-shadow(-8px 0 18px rgba(36, 92, 150, 0.22))
+        drop-shadow(8px 0 18px rgba(255, 121, 1, 0.18));
+
+    transform: translateY(-4px);
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+.hero-avatar:hover {
+    transform: translateY(-8px) scale(1.02);
+
+    filter:
+        drop-shadow(0 24px 28px rgba(0, 0, 0, 0.50))
+        drop-shadow(-10px 0 22px rgba(36, 92, 150, 0.28))
+        drop-shadow(10px 0 22px rgba(255, 121, 1, 0.22));
+}
+
+.jumbotron-heading {
+    color: #fff;
+    font-size: 46px;
+    margin-bottom: 15px;
+}
+
+.jumbotron .lead {
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.hero-description {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ccc;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.jumbotron-btns {
+    margin-top: 35px;
+}
+
+.jumbotron-btns a {
+    margin: 5px;
+}
+
+@media (max-width: 576px) {
+    .jumbotron {
+        padding: 75px 15px 60px;
+    }
+
+    .hero-avatar {
+        width: 125px;
+        height: 125px;
+        margin-bottom: 22px;
+    }
+
+    .jumbotron-heading {
+        font-size: 36px;
+    }
+
+    .jumbotron .lead {
+        font-size: 22px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+}
+</style>
+
 <div class="jumbotron">
 
-    <div class="hero-about-wrapper">
-
-        <img
-            class="hero-avatar"
-            src="{{site.url}}{{site.baseurl}}/assets/img/avatar.png"
-            alt="Nikolaos Chalatsis"
-            id="heroAvatar"
-            aria-controls="heroAboutPopup"
-            aria-expanded="false"
-        >
-
-        <div
-            class="hero-about-popup"
-            id="heroAboutPopup"
-            role="dialog"
-            aria-hidden="true"
-        >
-            <h2>About Me</h2>
-
-            <p>
-                I am a Data Engineer focused on designing and building reliable
-                data pipelines and automated data workflows.
-            </p>
-
-            <p>
-                My work and learning focus on Python, SQL, ETL / ELT, data ingestion,
-                data transformation, relational databases, data validation, and data quality.
-            </p>
-
-            <p>
-                I approach data problems from an engineering perspective, with emphasis
-                on automation, maintainability, error handling, reproducibility,
-                and reliable data processing.
-            </p>
-
-            <p>
-                I continuously strengthen my skills through professional experience,
-                technical training, certifications, and hands-on engineering projects.
-            </p>
-        </div>
-
-    </div>
+    <img
+        class="hero-avatar"
+        src="{{site.url}}{{site.baseurl}}/assets/img/avatar.png"
+        alt="Nikolaos Chalatsis"
+    >
 
     <p class="jumbotron-heading">
         Hi, I'm Nikolaos Chalatsis.
@@ -66,34 +121,3 @@
     </div>
 
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const wrapper = document.getElementById("heroAboutPopup")
-        ? document.querySelector(".hero-about-wrapper")
-        : null;
-
-    const avatar = document.getElementById("heroAvatar");
-    const popup = document.getElementById("heroAboutPopup");
-
-    if (!wrapper || !avatar || !popup) {
-        return;
-    }
-
-    avatar.addEventListener("click", function (event) {
-        event.stopPropagation();
-
-        const isOpen = wrapper.classList.toggle("is-open");
-
-        avatar.setAttribute("aria-expanded", isOpen ? "true" : "false");
-        popup.setAttribute("aria-hidden", isOpen ? "false" : "true");
-    });
-
-    wrapper.addEventListener("mouseleave", function () {
-        wrapper.classList.remove("is-open");
-
-        avatar.setAttribute("aria-expanded", "false");
-        popup.setAttribute("aria-hidden", "true");
-    });
-});
-</script>
