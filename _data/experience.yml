@@ -3,8 +3,16 @@
   company_url: https://www.peoplecert.org
   designation: Junior Data Engineer
   period: 2026 - Present
-  description: >
+
+  summary: >
     Contributing to reliable data workflows and practical data solutions,
     with focus on Python, SQL, ETL / ELT, automation, data validation,
     and data quality.
+
+  responsibilities:
+    - Supporting reliable data workflows and data processing.
+    - Working with Python and SQL for data-related tasks.
+    - Contributing to ETL / ELT and data transformation processes.
+    - Supporting data validation and data quality activities.
+
   visibility: true
