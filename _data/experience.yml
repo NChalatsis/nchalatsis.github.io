@@ -1,24 +1,10 @@
----
-layout: portfolio-page
-title: Experience
----
-
-{% for experience in site.data.experience %}
-    {% if experience.visibility %}
-    <article class="experience-entry">
-
-        <h2>{{ experience.designation }}</h2>
-
-        <h3>{{ experience.company_name }}</h3>
-
-        <p class="experience-period">
-            {{ experience.period }}
-        </p>
-
-        <p>
-            {{ experience.description }}
-        </p>
-
-    </article>
-    {% endif %}
-{% endfor %}
+- company_name: PeopleCert Global Services S.A.
+  company_logo: peoplecert.png
+  company_url: https://www.peoplecert.org
+  designation: Junior Data Engineer
+  period: 2026 - Present
+  description: >
+    Contributing to reliable data workflows and practical data solutions,
+    with focus on Python, SQL, ETL / ELT, automation, data validation,
+    and data quality.
+  visibility: true
