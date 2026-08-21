@@ -182,9 +182,7 @@ footer {
 
 .skills-group-title {
     margin: 20px 0 12px;
-
     color: #ffffff !important;
-
     font-size: 18px;
     font-weight: 500;
 }
@@ -211,7 +209,6 @@ footer {
         ) !important;
 
     border: 1px solid rgba(255, 121, 1, 0.28);
-
     border-radius: 999px !important;
 
     color: var(--portfolio-text) !important;
@@ -267,10 +264,6 @@ footer {
 .projects-sidebar-column,
 .projects-main-column {
     display: block;
-}
-
-.projects-sidebar-column,
-.projects-main-column {
     align-self: flex-start;
 }
 
@@ -297,9 +290,7 @@ footer {
 
 .projects-index-heading {
     margin: 0 0 10px;
-
     color: #ffffff !important;
-
     font-size: 18px;
     font-weight: 500;
     line-height: 1.3;
@@ -307,7 +298,6 @@ footer {
 
 .project-index-item {
     display: block;
-
     width: 100%;
     margin: 0;
     padding: 9px 11px;
@@ -335,15 +325,12 @@ footer {
         );
 
     border-color: var(--portfolio-orange-border);
-
     transform: translateX(3px);
 }
 
 .project-index-title {
     display: block;
-
     color: #ffffff !important;
-
     font-size: 14px;
     font-weight: 400;
     line-height: 1.4;
@@ -376,7 +363,6 @@ footer {
     width: 100%;
     margin: 0;
     padding: 22px 0;
-
     border-bottom: 1px solid var(--portfolio-border);
 }
 
@@ -393,16 +379,13 @@ footer {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-
     width: 100%;
     gap: 24px;
 }
 
 .project-title {
     margin: 0;
-
     color: #ffffff !important;
-
     font-size: 28px;
     font-weight: 400;
     line-height: 1.3;
@@ -410,11 +393,8 @@ footer {
 
 .project-date {
     flex: 0 0 auto;
-
     margin: 0;
-
     color: var(--portfolio-text-muted);
-
     font-size: 13px;
     line-height: 1.3;
 }
@@ -422,9 +402,7 @@ footer {
 .project-summary {
     width: 100%;
     margin: 14px 0 10px;
-
     color: var(--portfolio-text-soft);
-
     font-size: 16px;
     font-weight: 500;
     line-height: 1.6;
@@ -433,9 +411,7 @@ footer {
 .project-description {
     width: 100%;
     margin: 0;
-
     color: #c7d3df;
-
     font-size: 15px;
     line-height: 1.7;
 }
@@ -446,9 +422,7 @@ footer {
 
 .project-github a {
     color: var(--portfolio-orange) !important;
-
     font-size: 14px;
-
     text-decoration: none;
 }
 
@@ -472,10 +446,6 @@ footer {
 .certifications-sidebar-column,
 .certifications-main-column {
     display: block;
-}
-
-.certifications-sidebar-column,
-.certifications-main-column {
     align-self: flex-start;
 }
 
@@ -496,9 +466,7 @@ footer {
 
 .certifications-index-heading {
     margin: 0 0 10px;
-
     color: #ffffff !important;
-
     font-size: 18px;
     font-weight: 500;
     line-height: 1.3;
@@ -506,7 +474,6 @@ footer {
 
 .certification-index-item {
     display: block;
-
     width: 100%;
     margin: 0;
     padding: 9px 11px;
@@ -516,7 +483,6 @@ footer {
 
     color: var(--portfolio-text) !important;
     text-decoration: none !important;
-
     background: transparent;
 
     transition:
@@ -534,15 +500,12 @@ footer {
         );
 
     border-color: var(--portfolio-orange-border);
-
     transform: translateX(3px);
 }
 
 .certification-index-title {
     display: block;
-
     color: #ffffff !important;
-
     font-size: 14px;
     font-weight: 400;
     line-height: 1.4;
@@ -562,7 +525,6 @@ footer {
     width: 100%;
     margin: 0;
     padding: 22px 0;
-
     border-bottom: 1px solid var(--portfolio-border);
 }
 
@@ -578,7 +540,6 @@ footer {
 .certification-entry-layout {
     display: flex;
     align-items: flex-start;
-
     width: 100%;
     gap: 28px;
 }
@@ -590,21 +551,22 @@ footer {
 
 .certification-image {
     display: block;
-
     width: 140px;
     height: 140px;
 
     object-fit: contain;
 
-    background: #ffffff;
-    padding: 8px;
-    border-radius: 10px;
+    /* REMOVE WHITE FRAME */
+    background: transparent !important;
+    padding: 0 !important;
+
+    border: none;
+    border-radius: 0;
 
     cursor: pointer;
 
     box-shadow:
-        0 8px 18px rgba(0, 0, 0, 0.30),
-        inset 0 1px 0 rgba(255, 255, 255, 0.16);
+        0 8px 18px rgba(0, 0, 0, 0.30);
 
     transition:
         transform 0.2s ease,
@@ -615,8 +577,7 @@ footer {
     transform: translateY(-2px);
 
     box-shadow:
-        0 12px 24px rgba(0, 0, 0, 0.36),
-        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+        0 12px 24px rgba(0, 0, 0, 0.36);
 }
 
 .certification-content {
@@ -628,16 +589,13 @@ footer {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-
     width: 100%;
     gap: 20px;
 }
 
 .certification-title {
     margin: 0;
-
     color: #ffffff !important;
-
     font-size: 28px;
     font-weight: 400;
     line-height: 1.3;
@@ -645,17 +603,13 @@ footer {
 
 .certification-date {
     flex: 0 0 auto;
-
     color: var(--portfolio-text-muted);
-
     font-size: 13px;
 }
 
 .certification-summary {
     margin: 14px 0 10px;
-
     color: var(--portfolio-text-soft);
-
     font-size: 16px;
     font-weight: 500;
     line-height: 1.6;
@@ -663,9 +617,7 @@ footer {
 
 .certification-description {
     margin: 0;
-
     color: #c7d3df;
-
     font-size: 15px;
     line-height: 1.7;
 }
@@ -686,10 +638,6 @@ footer {
 .courses-sidebar-column,
 .courses-main-column {
     display: block;
-}
-
-.courses-sidebar-column,
-.courses-main-column {
     align-self: flex-start;
 }
 
@@ -710,9 +658,7 @@ footer {
 
 .courses-index-heading {
     margin: 0 0 10px;
-
     color: #ffffff !important;
-
     font-size: 18px;
     font-weight: 500;
     line-height: 1.3;
@@ -720,7 +666,6 @@ footer {
 
 .course-index-item {
     display: block;
-
     width: 100%;
     margin: 0;
     padding: 9px 11px;
@@ -730,7 +675,6 @@ footer {
 
     color: var(--portfolio-text) !important;
     text-decoration: none !important;
-
     background: transparent;
 
     transition:
@@ -748,15 +692,12 @@ footer {
         );
 
     border-color: var(--portfolio-orange-border);
-
     transform: translateX(3px);
 }
 
 .course-index-title {
     display: block;
-
     color: #ffffff !important;
-
     font-size: 14px;
     font-weight: 400;
     line-height: 1.4;
@@ -776,7 +717,6 @@ footer {
     width: 100%;
     margin: 0;
     padding: 22px 0;
-
     border-bottom: 1px solid var(--portfolio-border);
 }
 
@@ -792,7 +732,6 @@ footer {
 .course-entry-layout {
     display: flex;
     align-items: flex-start;
-
     width: 100%;
     gap: 28px;
 }
@@ -804,21 +743,22 @@ footer {
 
 .course-image {
     display: block;
-
     width: 140px;
     height: 140px;
 
     object-fit: contain;
 
-    background: #ffffff;
-    padding: 8px;
-    border-radius: 10px;
+    /* REMOVE WHITE FRAME */
+    background: transparent !important;
+    padding: 0 !important;
+
+    border: none;
+    border-radius: 0;
 
     cursor: pointer;
 
     box-shadow:
-        0 8px 18px rgba(0, 0, 0, 0.30),
-        inset 0 1px 0 rgba(255, 255, 255, 0.16);
+        0 8px 18px rgba(0, 0, 0, 0.30);
 
     transition:
         transform 0.2s ease,
@@ -829,8 +769,7 @@ footer {
     transform: translateY(-2px);
 
     box-shadow:
-        0 12px 24px rgba(0, 0, 0, 0.36),
-        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+        0 12px 24px rgba(0, 0, 0, 0.36);
 }
 
 .course-content {
@@ -842,16 +781,13 @@ footer {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-
     width: 100%;
     gap: 20px;
 }
 
 .course-title {
     margin: 0;
-
     color: #ffffff !important;
-
     font-size: 28px;
     font-weight: 400;
     line-height: 1.3;
@@ -859,17 +795,13 @@ footer {
 
 .course-date {
     flex: 0 0 auto;
-
     color: var(--portfolio-text-muted);
-
     font-size: 13px;
 }
 
 .course-summary {
     margin: 14px 0 10px;
-
     color: var(--portfolio-text-soft);
-
     font-size: 16px;
     font-weight: 500;
     line-height: 1.6;
@@ -877,9 +809,7 @@ footer {
 
 .course-description {
     margin: 0;
-
     color: #c7d3df;
-
     font-size: 15px;
     line-height: 1.7;
 }
