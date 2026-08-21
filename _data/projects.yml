@@ -19,7 +19,7 @@
     Placeholder description for a mini-project.
   visibility: true
 
-  - title: Example Mini Project 2
+- title: Example Mini Project 2
   type: mini-project
   date: 2025-10-01
   github_url: https://github.com/NChalatsis/example-mini-project
