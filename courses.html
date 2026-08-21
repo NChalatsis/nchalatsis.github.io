@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="portfolio-section">
+
+  <h1>Courses</h1>
+
+  {% assign courses = site.data.courses | sort: "date" | reverse %}
+
+  {% for course in courses %}
+
+    {% if course.visibility == true %}
+
+    <article class="portfolio-item">
+
+      <h2>{{ course.title }}</h2>
+
+      {% if course.date %}
+      <p>{{ course.date }}</p>
+      {% endif %}
+
+    </article>
+
+    {% endif %}
+
+  {% endfor %}
+
+</div>
