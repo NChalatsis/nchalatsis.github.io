@@ -56,84 +56,87 @@ layout: default
 
 
       <!-- =====================================================
-           RIGHT COLUMN - CERTIFICATION CONTENT
+           RIGHT COLUMN - CERTIFICATIONS
            ===================================================== -->
 
       <div class="col-lg-8 certifications-main-column">
 
-        <section class="card certifications-section">
+        <!-- Main title card -->
+
+        <div class="card certifications-title-card">
 
           <h1 class="card-title">
             Certifications
           </h1>
 
-          <br />
-
-          {% for certification in certifications_index %}
-
-            {% if certification.visibility == true %}
-
-            <article
-              class="certification-entry"
-              id="certification-{{ forloop.index }}"
-            >
-
-              <div class="certification-entry-layout">
-
-                <!-- Certificate image -->
-
-                <div class="certification-image-wrapper">
-
-                  <img
-                    src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ certification.image }}"
-                    class="certification-image"
-                    alt="{{ certification.title }}"
-                  />
-
-                </div>
+        </div>
 
 
-                <!-- Certificate content -->
+        <!-- Individual certification cards -->
 
-                <div class="certification-content">
+        {% for certification in certifications_index %}
 
-                  <div class="certification-entry-header">
+          {% if certification.visibility == true %}
 
-                    <h2 class="certification-title">
-                      {{ certification.title }}
-                    </h2>
+          <article
+            class="card certification-card"
+            id="certification-{{ forloop.index }}"
+          >
 
-                    {% if certification.date %}
-                    <span class="certification-date">
-                      {{ certification.date | date: "%Y" }}
-                    </span>
-                    {% endif %}
+            <div class="certification-entry-layout">
 
-                  </div>
+              <!-- Certificate image -->
 
-                  {% if certification.summary %}
-                  <p class="certification-summary">
-                    {{ certification.summary }}
-                  </p>
-                  {% endif %}
+              <div class="certification-image-wrapper">
 
-                  {% if certification.description %}
-                  <p class="certification-description">
-                    {{ certification.description }}
-                  </p>
-                  {% endif %}
-
-                </div>
+                <img
+                  src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ certification.image }}"
+                  class="certification-image"
+                  alt="{{ certification.title }}"
+                />
 
               </div>
 
-            </article>
 
-            {% endif %}
+              <!-- Certificate content -->
 
-          {% endfor %}
+              <div class="certification-content">
 
-        </section>
+                <div class="certification-entry-header">
+
+                  <h2 class="certification-title">
+                    {{ certification.title }}
+                  </h2>
+
+                  {% if certification.date %}
+                  <span class="certification-date">
+                    {{ certification.date | date: "%Y" }}
+                  </span>
+                  {% endif %}
+
+                </div>
+
+                {% if certification.summary %}
+                <p class="certification-summary">
+                  {{ certification.summary }}
+                </p>
+                {% endif %}
+
+                {% if certification.description %}
+                <p class="certification-description">
+                  {{ certification.description }}
+                </p>
+                {% endif %}
+
+              </div>
+
+            </div>
+
+          </article>
+
+          {% endif %}
+
+        {% endfor %}
 
       </div>
 
