@@ -67,6 +67,8 @@ layout: default
             Certifications
           </h1>
 
+          <br />
+
           {% for certification in certifications_index %}
 
             {% if certification.visibility == true %}
@@ -78,6 +80,8 @@ layout: default
 
               <div class="certification-entry-layout">
 
+                <!-- Certificate image -->
+
                 <div class="certification-image-wrapper">
 
                   <img
@@ -87,6 +91,9 @@ layout: default
                   />
 
                 </div>
+
+
+                <!-- Certificate content -->
 
                 <div class="certification-content">
 
