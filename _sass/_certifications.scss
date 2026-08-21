@@ -1,1 +1,326 @@
+/* =========================================================
+   Certifications Page
+   ========================================================= */
 
+.certifications-page {
+    width: 100%;
+}
+
+.certifications-layout {
+    align-items: flex-start;
+}
+
+.certifications-sidebar-column,
+.certifications-main-column {
+    display: block;
+    align-self: flex-start;
+}
+
+
+/* =========================================================
+   Certifications - Sidebar
+   ========================================================= */
+
+.certifications-index-card {
+    position: static;
+
+    width: 100%;
+
+    margin-top: 0;
+}
+
+.certifications-index-group {
+    width: 100%;
+}
+
+.certifications-index-heading {
+    margin: 0 0 10px;
+
+    color: #ffffff !important;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    line-height: 1.3;
+}
+
+.certification-index-item {
+    display: block;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 9px 11px;
+
+    border: 1px solid transparent;
+    border-radius: 9px;
+
+    color: var(--portfolio-text) !important;
+    text-decoration: none !important;
+
+    background: transparent;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.certification-index-item:hover {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(11, 39, 69, 0.95),
+            rgba(7, 26, 47, 0.95)
+        );
+
+    border-color: var(--portfolio-orange-border);
+
+    transform: translateX(3px);
+}
+
+.certification-index-title {
+    display: block;
+
+    color: #ffffff !important;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   Certifications - Main Content
+   ========================================================= */
+
+.certifications-section {
+    width: 100%;
+
+    margin: 0;
+}
+
+.certification-entry {
+    width: 100%;
+
+    margin: 0;
+    padding: 22px 0;
+
+    border-bottom: 1px solid var(--portfolio-border);
+}
+
+.certification-entry:first-of-type {
+    padding-top: 0;
+}
+
+.certification-entry:last-child {
+    padding-bottom: 0;
+
+    border-bottom: none;
+}
+
+.certification-entry-layout {
+    display: flex;
+
+    align-items: flex-start;
+
+    width: 100%;
+
+    gap: 28px;
+}
+
+.certification-image-wrapper {
+    flex: 0 0 140px;
+
+    width: 140px;
+}
+
+.certification-image {
+    display: block;
+
+    width: 140px;
+    height: 140px;
+
+    object-fit: contain;
+
+    background: transparent !important;
+    padding: 0 !important;
+
+    border: none;
+    border-radius: 0;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.30);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.certification-image:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 24px rgba(0, 0, 0, 0.36);
+}
+
+.certification-content {
+    flex: 1 1 auto;
+
+    min-width: 0;
+}
+
+.certification-entry-header {
+    display: flex;
+
+    align-items: baseline;
+    justify-content: space-between;
+
+    width: 100%;
+
+    gap: 20px;
+}
+
+.certification-title {
+    margin: 0;
+
+    color: #ffffff !important;
+
+    font-size: 28px;
+    font-weight: 400;
+
+    line-height: 1.3;
+}
+
+.certification-date {
+    flex: 0 0 auto;
+
+    color: var(--portfolio-text-muted);
+
+    font-size: 13px;
+}
+
+.certification-summary {
+    margin: 14px 0 10px;
+
+    color: var(--portfolio-text-soft);
+
+    font-size: 16px;
+    font-weight: 500;
+
+    line-height: 1.6;
+}
+
+.certification-description {
+    margin: 0;
+
+    color: #c7d3df;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   Mobile Certifications
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .certifications-sidebar-column {
+        display: none !important;
+    }
+
+    .certifications-main-column {
+        width: 100%;
+
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .certifications-page .col-lg-8 {
+        width: 100%;
+        max-width: 100%;
+
+        flex: 0 0 100%;
+    }
+
+    .certification-entry-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 6px;
+    }
+
+    .certification-title {
+        color: #ffffff !important;
+        font-size: 25px;
+    }
+
+    .certification-summary {
+        color: #edf3f9 !important;
+    }
+
+    .certification-description {
+        color: #dbe6f0 !important;
+    }
+
+    .certification-date {
+        color: #c0cfde !important;
+    }
+
+    .certification-entry-layout {
+        flex-direction: column;
+    }
+
+    .certification-image-wrapper {
+        flex: 0 0 auto;
+
+        width: 100%;
+    }
+
+    .certification-image {
+        width: 120px;
+        height: 120px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .certification-title {
+        color: #ffffff !important;
+        font-size: 22px;
+    }
+
+    .certification-summary {
+        color: #edf3f9 !important;
+        font-size: 15px;
+    }
+
+    .certification-description {
+        color: #dbe6f0 !important;
+        font-size: 14px;
+    }
+
+    .certification-date {
+        color: #c6d5e3 !important;
+    }
+
+    .certification-entry {
+        padding: 18px 0;
+    }
+
+    .certification-image {
+        width: 110px;
+        height: 110px;
+    }
+
+}
