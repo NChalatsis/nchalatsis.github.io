@@ -2,28 +2,166 @@
 layout: default
 ---
 
-<div class="portfolio-section">
+<div class="col-lg-12">
 
-  <h1>Projects</h1>
+  <div class="row">
 
-  {% assign projects = site.data.projects | sort: "date" | reverse %}
+    <!-- =====================================================
+         LEFT COLUMN - PROJECT INDEX
+         ===================================================== -->
 
-  {% for project in projects %}
+    <div class="col-lg-4">
 
-    {% if project.visibility == true %}
+      <div class="card projects-index-card">
 
-    <article class="portfolio-item">
+        <h1 class="card-title">
+          Projects
+        </h1>
 
-      <h2>{{ project.title }}</h2>
+        <div class="projects-index-list">
 
-      {% if project.date %}
-      <p>{{ project.date }}</p>
-      {% endif %}
+          {% assign projects_index = site.data.projects
+            | sort: "date"
+            | reverse
+          %}
 
-    </article>
+          {% for project in projects_index %}
 
-    {% endif %}
+            {% if project.visibility == true %}
 
-  {% endfor %}
+            <a
+              class="project-index-item"
+              href="#project-{{ forloop.index }}"
+            >
+              <span class="project-index-title">
+                {{ project.title }}
+              </span>
+
+              <span class="project-index-type">
+                {% if project.type == "mini-project" %}
+                  Mini-Project
+                {% else %}
+                  Project
+                {% endif %}
+              </span>
+            </a>
+
+            {% endif %}
+
+          {% endfor %}
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         RIGHT COLUMN - PROJECT CONTENT
+         ===================================================== -->
+
+    <div class="col-lg-8">
+
+
+      <!-- ===================================================
+           PROJECTS
+           =================================================== -->
+
+      <div class="card projects-section">
+
+        <h1 class="card-title">
+          Projects
+        </h1>
+
+        <br />
+
+        {% assign main_projects = site.data.projects
+          | sort: "date"
+          | reverse
+        %}
+
+        {% for project in main_projects %}
+
+          {% if project.visibility == true and project.type == "project" %}
+
+          <article
+            class="project-entry"
+            id="project-{{ forloop.index }}"
+          >
+
+            <h2 class="project-title">
+              {{ project.title }}
+            </h2>
+
+            <p class="project-date">
+              {{ project.date | date: "%Y" }}
+            </p>
+
+            <p class="project-summary">
+              {{ project.summary }}
+            </p>
+
+            <p class="project-description">
+              {{ project.description }}
+            </p>
+
+          </article>
+
+          {% endif %}
+
+        {% endfor %}
+
+      </div>
+
+
+      <!-- ===================================================
+           MINI PROJECTS
+           =================================================== -->
+
+      <div class="card projects-section">
+
+        <h1 class="card-title">
+          Mini-Projects
+        </h1>
+
+        <br />
+
+        {% for project in main_projects %}
+
+          {% if project.visibility == true and project.type == "mini-project" %}
+
+          <article
+            class="project-entry"
+            id="mini-project-{{ forloop.index }}"
+          >
+
+            <h2 class="project-title">
+              {{ project.title }}
+            </h2>
+
+            <p class="project-date">
+              {{ project.date | date: "%Y" }}
+            </p>
+
+            <p class="project-summary">
+              {{ project.summary }}
+            </p>
+
+            <p class="project-description">
+              {{ project.description }}
+            </p>
+
+          </article>
+
+          {% endif %}
+
+        {% endfor %}
+
+      </div>
+
+    </div>
+
+  </div>
 
 </div>
