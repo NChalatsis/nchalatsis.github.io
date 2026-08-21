@@ -434,29 +434,30 @@ body {
 
 
 /* =========================================================
-   Certifications - Main Content
+   Certifications - Title Card
    ========================================================= */
 
-.certifications-section {
+.certifications-title-card {
     width: 100%;
+    margin: 0 0 24px;
+}
+
+.certifications-title-card .card-title {
     margin: 0;
 }
 
-.certification-entry {
+
+/* =========================================================
+   Certifications - Individual Cards
+   ========================================================= */
+
+.certification-card {
     width: 100%;
-    margin: 0;
-    padding: 22px 0;
-
-    border-bottom: 1px solid var(--portfolio-border);
+    margin: 0 0 24px;
 }
 
-.certification-entry:first-of-type {
-    padding-top: 0;
-}
-
-.certification-entry:last-child {
-    padding-bottom: 0;
-    border-bottom: none;
+.certification-card:last-child {
+    margin-bottom: 0;
 }
 
 .certification-entry-layout {
@@ -511,7 +512,9 @@ body {
 
 .certification-date {
     flex: 0 0 auto;
+
     color: var(--portfolio-text-muted);
+
     font-size: 13px;
 }
 
@@ -578,6 +581,7 @@ body {
     }
 
 }
+
 
 @media (max-width: 576px) {
 
