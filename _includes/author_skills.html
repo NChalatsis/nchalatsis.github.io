@@ -1,2 +1,28 @@
-<p> HTML , CSS , Javascript , PHP, Python, C</p>
-<p> Adobe XD, Inkscape, Git, Linux </p>
+<div class="skills-group">
+
+  {% if site.data.skills.technical %}
+    <h3 class="skills-group-title">Technical</h3>
+
+    <div class="skills-list">
+      {% for skill in site.data.skills.technical %}
+        <span class="skill-item">
+          {{ skill }}
+        </span>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+
+  {% if site.data.skills.tools %}
+    <h3 class="skills-group-title">Tools</h3>
+
+    <div class="skills-list">
+      {% for skill in site.data.skills.tools %}
+        <span class="skill-item">
+          {{ skill }}
+        </span>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+</div>
