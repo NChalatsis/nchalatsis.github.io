@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="portfolio-section">
+
+  <h1>Projects</h1>
+
+  {% assign projects = site.data.projects | sort: "date" | reverse %}
+
+  {% for project in projects %}
+
+    {% if project.visibility == true %}
+
+    <article class="portfolio-item">
+
+      <h2>{{ project.title }}</h2>
+
+      {% if project.date %}
+      <p>{{ project.date }}</p>
+      {% endif %}
+
+    </article>
+
+    {% endif %}
+
+  {% endfor %}
+
+</div>
