@@ -2,216 +2,230 @@
 layout: default
 ---
 
-<div class="col-lg-12">
+<div class="projects-page">
 
-  <div class="row">
+  <div class="col-lg-12">
 
-    <!-- =====================================================
-         LEFT COLUMN - PROJECT INDEX
-         ===================================================== -->
+    <div class="row projects-layout">
 
-    <div class="col-lg-4">
+      <!-- =====================================================
+           LEFT COLUMN - PROJECT INDEX
+           ===================================================== -->
 
-      <div class="card projects-index-card">
+      <div class="col-lg-4 projects-sidebar-column">
 
-        <h1 class="card-title">
-          Projects
-        </h1>
+        <div class="card projects-index-card">
 
-        {% assign projects_index = site.data.projects
-          | sort: "date"
-          | reverse
-        %}
-
-        <!-- =================================================
-             PROJECTS INDEX
-             ================================================= -->
-
-        <div class="projects-index-group">
-
-          <h3 class="projects-index-heading">
+          <h1 class="card-title">
             Projects
-          </h3>
+          </h1>
+
+          {% assign projects_index = site.data.projects
+            | sort: "date"
+            | reverse
+          %}
+
+          <!-- Projects -->
+          <div class="projects-index-group">
+
+            <h3 class="projects-index-heading">
+              Projects
+            </h3>
+
+            {% for project in projects_index %}
+
+              {% if project.visibility == true and project.type == "project" %}
+
+              <a
+                class="project-index-item"
+                href="{{ project.github_url }}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="project-index-title">
+                  {{ project.title }}
+                </span>
+              </a>
+
+              {% endif %}
+
+            {% endfor %}
+
+          </div>
+
+
+          <!-- Separator + Mini Projects -->
+          <div class="projects-index-group">
+
+            <h3 class="projects-index-heading">
+              Mini-Projects
+            </h3>
+
+            {% for project in projects_index %}
+
+              {% if project.visibility == true and project.type == "mini-project" %}
+
+              <a
+                class="project-index-item"
+                href="{{ project.github_url }}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="project-index-title">
+                  {{ project.title }}
+                </span>
+              </a>
+
+              {% endif %}
+
+            {% endfor %}
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =====================================================
+           RIGHT COLUMN - PROJECT CONTENT
+           ===================================================== -->
+
+      <div class="col-lg-8 projects-main-column">
+
+
+        <!-- ===================================================
+             PROJECTS
+             =================================================== -->
+
+        <section class="card projects-section">
+
+          <div class="projects-section-header">
+
+            <h1 class="card-title">
+              Projects
+            </h1>
+
+          </div>
 
           {% for project in projects_index %}
 
             {% if project.visibility == true and project.type == "project" %}
 
-            <a
-              class="project-index-item"
-              href="{{ project.github_url }}"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="project-index-title">
-                {{ project.title }}
-              </span>
-            </a>
+            <article class="project-entry">
+
+              <div class="project-entry-header">
+
+                <h2 class="project-title">
+                  {{ project.title }}
+                </h2>
+
+                {% if project.date %}
+                <span class="project-date">
+                  {{ project.date | date: "%Y" }}
+                </span>
+                {% endif %}
+
+              </div>
+
+              {% if project.summary %}
+              <p class="project-summary">
+                {{ project.summary }}
+              </p>
+              {% endif %}
+
+              {% if project.description %}
+              <p class="project-description">
+                {{ project.description }}
+              </p>
+              {% endif %}
+
+              {% if project.github_url %}
+              <div class="project-github">
+                <a
+                  href="{{ project.github_url }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on GitHub
+                </a>
+              </div>
+              {% endif %}
+
+            </article>
 
             {% endif %}
 
           {% endfor %}
 
-        </div>
+        </section>
 
 
-        <!-- =================================================
-             MINI PROJECTS INDEX
-             ================================================= -->
+        <!-- ===================================================
+             MINI PROJECTS
+             =================================================== -->
 
-        <div class="projects-index-group">
+        <section class="card projects-section">
 
-          <h3 class="projects-index-heading">
-            Mini-Projects
-          </h3>
+          <div class="projects-section-header">
+
+            <h1 class="card-title">
+              Mini-Projects
+            </h1>
+
+          </div>
 
           {% for project in projects_index %}
 
             {% if project.visibility == true and project.type == "mini-project" %}
 
-            <a
-              class="project-index-item"
-              href="{{ project.github_url }}"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="project-index-title">
-                {{ project.title }}
-              </span>
-            </a>
+            <article class="project-entry">
+
+              <div class="project-entry-header">
+
+                <h2 class="project-title">
+                  {{ project.title }}
+                </h2>
+
+                {% if project.date %}
+                <span class="project-date">
+                  {{ project.date | date: "%Y" }}
+                </span>
+                {% endif %}
+
+              </div>
+
+              {% if project.summary %}
+              <p class="project-summary">
+                {{ project.summary }}
+              </p>
+              {% endif %}
+
+              {% if project.description %}
+              <p class="project-description">
+                {{ project.description }}
+              </p>
+              {% endif %}
+
+              {% if project.github_url %}
+              <div class="project-github">
+                <a
+                  href="{{ project.github_url }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on GitHub
+                </a>
+              </div>
+              {% endif %}
+
+            </article>
 
             {% endif %}
 
           {% endfor %}
 
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- =====================================================
-         RIGHT COLUMN - PROJECT CONTENT
-         ===================================================== -->
-
-    <div class="col-lg-8">
-
-
-      <!-- ===================================================
-           PROJECTS
-           =================================================== -->
-
-      <div class="card projects-section">
-
-        <h1 class="card-title">
-          Projects
-        </h1>
-
-        <br />
-
-        {% for project in projects_index %}
-
-          {% if project.visibility == true and project.type == "project" %}
-
-          <article class="project-entry">
-
-            <div class="project-entry-header">
-
-              <h2 class="project-title">
-                {{ project.title }}
-              </h2>
-
-              <span class="project-date">
-                {{ project.date | date: "%Y" }}
-              </span>
-
-            </div>
-
-            <p class="project-summary">
-              {{ project.summary }}
-            </p>
-
-            <p class="project-description">
-              {{ project.description }}
-            </p>
-
-            {% if project.github_url %}
-            <p class="project-github">
-              <a
-                href="{{ project.github_url }}"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View on GitHub
-              </a>
-            </p>
-            {% endif %}
-
-          </article>
-
-          {% endif %}
-
-        {% endfor %}
-
-      </div>
-
-
-      <!-- ===================================================
-           MINI PROJECTS
-           =================================================== -->
-
-      <div class="card projects-section">
-
-        <h1 class="card-title">
-          Mini-Projects
-        </h1>
-
-        <br />
-
-        {% for project in projects_index %}
-
-          {% if project.visibility == true and project.type == "mini-project" %}
-
-          <article class="project-entry">
-
-            <div class="project-entry-header">
-
-              <h2 class="project-title">
-                {{ project.title }}
-              </h2>
-
-              <span class="project-date">
-                {{ project.date | date: "%Y" }}
-              </span>
-
-            </div>
-
-            <p class="project-summary">
-              {{ project.summary }}
-            </p>
-
-            <p class="project-description">
-              {{ project.description }}
-            </p>
-
-            {% if project.github_url %}
-            <p class="project-github">
-              <a
-                href="{{ project.github_url }}"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View on GitHub
-              </a>
-            </p>
-            {% endif %}
-
-          </article>
-
-          {% endif %}
-
-        {% endfor %}
+        </section>
 
       </div>
 
