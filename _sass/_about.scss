@@ -1,0 +1,101 @@
+
+/* =========================================================
+   About Page
+   ========================================================= */
+
+.about-data-entry {
+    display: flex;
+    align-items: flex-start;
+
+    width: 100%;
+
+    gap: 28px;
+    margin: 0;
+}
+
+.about-data-logo {
+    flex: 0 0 110px;
+    width: 110px;
+}
+
+.about-data-content {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.education-logo,
+.experience-logo {
+    display: block;
+
+    width: 100px;
+    height: 100px;
+
+    object-fit: contain;
+}
+
+.education-logo {
+    background: #ffffff;
+
+    padding: 8px;
+
+    border-radius: 10px;
+}
+
+.about-data-content h4,
+.about-data-content h6,
+.about-data-content p {
+    max-width: none;
+}
+
+
+/* =========================================================
+   Mobile About
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .about-data-content .experience-title {
+        color: var(--portfolio-orange) !important;
+    }
+
+    .about-data-content .experience-info {
+        color: #edf3f9 !important;
+    }
+
+    #profile-card .profile-name,
+    #profile-card h1,
+    #profile-card h2,
+    #profile-card h3 {
+        color: var(--portfolio-orange) !important;
+    }
+
+    #profile-card .profile-name {
+        font-size: 22px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .about-data-content .experience-title {
+        color: var(--portfolio-orange) !important;
+        font-size: 21px;
+    }
+
+    .about-data-content .experience-info {
+        color: #edf3f9 !important;
+    }
+
+    #profile-card .profile-name,
+    #profile-card h1,
+    #profile-card h2,
+    #profile-card h3 {
+        color: var(--portfolio-orange) !important;
+    }
+
+    #profile-card .profile-name {
+        font-size: 20px;
+    }
+
+}

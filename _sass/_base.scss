@@ -1,0 +1,44 @@
+/* =========================================================
+   Base Styles
+   ========================================================= */
+
+body {
+    color: var(--portfolio-text);
+}
+
+.card {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(10, 31, 56, 0.98),
+            rgba(5, 18, 34, 0.98)
+        ) !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    box-shadow:
+        var(--portfolio-highlight),
+        var(--portfolio-depth),
+        var(--portfolio-shadow);
+
+    border-radius: 8px;
+}
+
+.card-title {
+    color: #ffffff !important;
+}
+
+.jumbotron-heading {
+    color: #ffffff !important;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+}
+
+.jumbotron .lead {
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.50);
+}
+
+.hero-description {
+    color: var(--portfolio-text) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+}

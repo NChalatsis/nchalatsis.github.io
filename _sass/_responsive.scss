@@ -1,0 +1,397 @@
+
+/* =========================================================
+   Responsive / Mobile
+   ========================================================= */
+
+
+/* =========================================================
+   Tablet / Mobile
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    /* -----------------------------------------------------
+       Mobile Navigation
+       ----------------------------------------------------- */
+
+    .portfolio-navbar-inner {
+        min-height: 64px;
+        padding: 0 20px;
+    }
+
+    .portfolio-menu-toggle {
+        display: block;
+    }
+
+    .portfolio-navigation {
+        position: absolute;
+
+        top: 64px;
+        left: 0;
+
+        width: 100%;
+
+        margin: 0;
+
+        padding: 10px 20px 18px;
+
+        background:
+            linear-gradient(
+                180deg,
+                #0a2038 0%,
+                #061426 100%
+            );
+
+        border-top: 1px solid rgba(255, 255, 255, 0.04);
+        border-bottom: 1px solid rgba(255, 121, 1, 0.22);
+
+        box-shadow:
+            0 12px 24px rgba(0, 0, 0, 0.34);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transform: translateY(-10px);
+
+        transition:
+            opacity 0.2s ease,
+            visibility 0.2s ease,
+            transform 0.2s ease;
+    }
+
+    .portfolio-navigation.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        transform: translateY(0);
+    }
+
+    .portfolio-nav-list {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+    }
+
+    .portfolio-nav-item {
+        width: 100%;
+    }
+
+    .portfolio-nav-link {
+        width: 100%;
+
+        padding: 13px 12px;
+
+        font-size: 16px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* -----------------------------------------------------
+       General Mobile Text Contrast
+       ----------------------------------------------------- */
+
+    .card-title,
+    .project-title,
+    .certification-title,
+    .course-title {
+        color: #ffffff !important;
+    }
+
+    .project-summary,
+    .certification-summary,
+    .course-summary {
+        color: #edf3f9 !important;
+    }
+
+    .project-description,
+    .certification-description,
+    .course-description {
+        color: #dbe6f0 !important;
+    }
+
+    .project-date,
+    .certification-date,
+    .course-date {
+        color: #c0cfde !important;
+    }
+
+    .project-github a {
+        color: var(--portfolio-orange) !important;
+    }
+
+
+    /* -----------------------------------------------------
+       About - Mobile Titles
+       ----------------------------------------------------- */
+
+    #profile-card .profile-name,
+    #profile-card h1,
+    #profile-card h2,
+    #profile-card h3 {
+        color: var(--portfolio-orange) !important;
+    }
+
+    #profile-card .profile-name {
+        font-size: 22px;
+    }
+
+    .about-data-content .experience-title {
+        color: var(--portfolio-orange) !important;
+    }
+
+    .about-data-content .experience-info {
+        color: #edf3f9 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       Hide Sidebars
+       ----------------------------------------------------- */
+
+    .projects-sidebar-column,
+    .certifications-sidebar-column,
+    .courses-sidebar-column {
+        display: none !important;
+    }
+
+    .projects-main-column,
+    .certifications-main-column,
+    .courses-main-column {
+        width: 100%;
+
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .projects-page .col-lg-8,
+    .certifications-page .col-lg-8,
+    .courses-page .col-lg-8 {
+        width: 100%;
+        max-width: 100%;
+
+        flex: 0 0 100%;
+    }
+
+
+    /* -----------------------------------------------------
+       Mobile Entries
+       ----------------------------------------------------- */
+
+    .project-entry-header,
+    .certification-entry-header,
+    .course-entry-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 6px;
+    }
+
+    .project-title,
+    .certification-title,
+    .course-title {
+        font-size: 25px;
+    }
+
+    .certification-entry-layout,
+    .course-entry-layout {
+        flex-direction: column;
+    }
+
+    .certification-image-wrapper,
+    .course-image-wrapper {
+        flex: 0 0 auto;
+
+        width: 100%;
+    }
+
+    .certification-image,
+    .course-image {
+        width: 120px;
+        height: 120px;
+    }
+
+}
+
+
+/* =========================================================
+   Small Mobile
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+    /* -----------------------------------------------------
+       Navigation
+       ----------------------------------------------------- */
+
+    .portfolio-navbar-inner {
+        padding: 0 14px;
+    }
+
+    .portfolio-navigation {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+
+    /* -----------------------------------------------------
+       Global Contrast
+       ----------------------------------------------------- */
+
+    body {
+        color: #edf3f9;
+    }
+
+    .card {
+        color: #edf3f9;
+    }
+
+
+    /* -----------------------------------------------------
+       About - Orange Titles
+       ----------------------------------------------------- */
+
+    #profile-card .profile-name,
+    #profile-card h1,
+    #profile-card h2,
+    #profile-card h3 {
+        color: var(--portfolio-orange) !important;
+    }
+
+    #profile-card .profile-name {
+        font-size: 20px;
+    }
+
+    .about-data-content .experience-title {
+        color: var(--portfolio-orange) !important;
+        font-size: 21px;
+    }
+
+    .about-data-content .experience-info {
+        color: #edf3f9 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       Main Titles / Text
+       ----------------------------------------------------- */
+
+    .project-title,
+    .certification-title,
+    .course-title {
+        color: #ffffff !important;
+        font-size: 22px;
+    }
+
+    .project-summary,
+    .certification-summary,
+    .course-summary {
+        color: #edf3f9 !important;
+        font-size: 15px;
+    }
+
+    .project-description,
+    .certification-description,
+    .course-description {
+        color: #dbe6f0 !important;
+        font-size: 14px;
+    }
+
+    .project-date,
+    .certification-date,
+    .course-date {
+        color: #c6d5e3 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       Completely Hide Sidebars
+       ----------------------------------------------------- */
+
+    .projects-sidebar-column,
+    .certifications-sidebar-column,
+    .courses-sidebar-column {
+        display: none !important;
+    }
+
+    .projects-main-column,
+    .certifications-main-column,
+    .courses-main-column {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        flex: 0 0 100% !important;
+    }
+
+    .projects-page .col-lg-4,
+    .projects-page .col-lg-8,
+    .certifications-page .col-lg-4,
+    .certifications-page .col-lg-8,
+    .courses-page .col-lg-4,
+    .courses-page .col-lg-8 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    /* -----------------------------------------------------
+       Built & Maintained Badge
+       ----------------------------------------------------- */
+
+    .built-by-badge {
+        left: 7px;
+        bottom: 7px;
+
+        gap: 3px;
+
+        padding: 2px 5px 2px 2px;
+
+        border-radius: 11px;
+
+        font-size: 6px !important;
+        line-height: 1.1;
+    }
+
+    .built-by-badge img {
+        width: 14px;
+        height: 14px;
+    }
+
+    .built-by-badge span {
+        font-size: 6px !important;
+    }
+
+    .built-by-badge strong {
+        font-size: 6px !important;
+    }
+
+
+    /* -----------------------------------------------------
+       Entry Spacing
+       ----------------------------------------------------- */
+
+    .project-entry,
+    .certification-entry,
+    .course-entry {
+        padding: 18px 0;
+    }
+
+
+    /* -----------------------------------------------------
+       Images
+       ----------------------------------------------------- */
+
+    .certification-image,
+    .course-image {
+        width: 110px;
+        height: 110px;
+    }
+
+}
