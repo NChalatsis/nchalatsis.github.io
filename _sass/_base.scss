@@ -2,11 +2,198 @@
    Base Styles
    ========================================================= */
 
-body {
-    color: var(--portfolio-text);
+
+/* =========================================================
+   Global document defaults
+   ========================================================= */
+
+html {
+    height: 100%;
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+
+    scroll-behavior: smooth;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    margin-left: 30px !important;
+}
+
+
+/* =========================================================
+   Body
+   ========================================================= */
+
+body {
+    color: var(--portfolio-text) !important;
+
+    font-family: $body-typeface !important;
+
+    font-feature-settings: "kern" on;
+
+    font-size: 1.4rem;
+
+    font-variant-numeric: oldstyle-nums;
+
+    hanging-punctuation: first last;
+
+    height: 100%;
+
+    line-height: 1.35em;
+
+    margin: 0;
+
+    text-rendering: optimizeLegibility;
+
+    padding-top: 33px;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+
+/* =========================================================
+   Generic content elements
+   ========================================================= */
+
+.reactions-view {
+    color: var(--bold-color) !important;
+}
+
+.col-lg-12 {
+    padding-left: 0 !important;
+    padding-top: 20px !important;
+    padding-right: 0 !important;
+}
+
+.col-auto,
+.col-lg,
+.col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-auto,
+.col-md,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-auto,
+.col-sm,
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-auto,
+.col-xl,
+.col-xl-1,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12,
+.col-xl-2,
+.col-xl-3,
+.col-xl-4,
+.col-xl-5,
+.col-xl-6,
+.col-xl-7,
+.col-xl-8,
+.col-xl-9,
+.col-xl-auto {
+    padding-left: 5px !important;
+}
+
+
+/* =========================================================
+   Code / preformatted content
+   ========================================================= */
+
+pre {
+    display: block;
+
+    font-size: 87.5%;
+
+    color: #d4d4d4 !important;
+}
+
+.m10 {
+    margin: 35px;
+}
+
+
+/* =========================================================
+   Blockquotes
+   ========================================================= */
+
+blockquote {
+    margin: 2rem 1rem 1rem;
+
+    padding: 3px;
+
+    background: var(--main-background-color) !important;
+
+    border: 1px solid;
+
+    color: var(--bold-color);
+}
+
+
+/* =========================================================
+   Headings / Links
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--bold-color) !important;
+    line-height: 1.1;
+}
+
+a {
+    color: var(--link-color) !important;
+}
+
+
+/* =========================================================
+   Cards
+   ========================================================= */
+
 .card {
+    margin: 20px !important;
+    padding: 20px !important;
+
     background:
         linear-gradient(
             145deg,
@@ -26,19 +213,68 @@ body {
 
 .card-title {
     color: #ffffff !important;
+
+    margin-bottom: .75rem !important;
 }
+
+
+/* =========================================================
+   Bootstrap / Layout overrides
+   ========================================================= */
+
+.container-fluid {
+    padding: 0 !important;
+
+    width: fit-content !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 10px !important;
+}
+
+
+/* =========================================================
+   Jumbotron / Hero
+   ========================================================= */
 
 .jumbotron-heading {
     color: #ffffff !important;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+
+    text-shadow:
+        0 2px 12px rgba(0, 0, 0, 0.55);
 }
 
 .jumbotron .lead {
     color: #ffffff !important;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.50);
+
+    text-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.50);
 }
 
 .hero-description {
     color: var(--portfolio-text) !important;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+
+    text-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.55);
+}
+
+
+/* =========================================================
+   Scrollbar
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(28, 28, 30);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #212529;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #333;
 }
