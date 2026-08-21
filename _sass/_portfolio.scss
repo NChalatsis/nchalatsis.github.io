@@ -68,7 +68,6 @@ body {
 
 /* =========================================================
    Unified Deep Blue Surface
-   Applies to cards and large rectangular surfaces
    ========================================================= */
 
 .card {
@@ -183,7 +182,9 @@ footer {
 
 .skills-group-title {
     margin: 20px 0 12px;
+
     color: #ffffff !important;
+
     font-size: 18px;
     font-weight: 500;
 }
@@ -599,9 +600,23 @@ footer {
     padding: 8px;
     border-radius: 10px;
 
+    cursor: pointer;
+
     box-shadow:
         0 8px 18px rgba(0, 0, 0, 0.30),
         inset 0 1px 0 rgba(255, 255, 255, 0.16);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.certification-image:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 24px rgba(0, 0, 0, 0.36),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
 }
 
 .certification-content {
@@ -799,9 +814,23 @@ footer {
     padding: 8px;
     border-radius: 10px;
 
+    cursor: pointer;
+
     box-shadow:
         0 8px 18px rgba(0, 0, 0, 0.30),
         inset 0 1px 0 rgba(255, 255, 255, 0.16);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.course-image:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 24px rgba(0, 0, 0, 0.36),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
 }
 
 .course-content {
@@ -853,6 +882,110 @@ footer {
 
     font-size: 15px;
     line-height: 1.7;
+}
+
+
+/* =========================================================
+   Image Popup
+   ========================================================= */
+
+.image-popup-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.image-popup-trigger {
+    outline: none;
+}
+
+.image-popup-trigger:focus {
+    box-shadow:
+        0 0 0 2px rgba(255, 121, 1, 0.45),
+        0 8px 18px rgba(0, 0, 0, 0.30);
+}
+
+.image-popup {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    z-index: 10000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    max-width: 92vw;
+    max-height: 92vh;
+
+    padding: 12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(10, 31, 56, 0.99),
+            rgba(4, 15, 29, 0.99)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 12px;
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.60),
+        0 10px 26px rgba(0, 0, 0, 0.40),
+        inset 0 1px 0 rgba(255, 255, 255, 0.07);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.96);
+
+    transition:
+        opacity 0.18s ease,
+        visibility 0.18s ease,
+        transform 0.18s ease;
+}
+
+.image-popup.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+}
+
+.image-popup-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 88vw;
+    max-height: 88vh;
+}
+
+.image-popup-image {
+    display: block;
+
+    max-width: 88vw;
+    max-height: 88vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 6px;
+
+    box-shadow:
+        0 16px 34px rgba(0, 0, 0, 0.45);
 }
 
 
@@ -947,6 +1080,22 @@ footer {
     .certification-description,
     .course-description {
         font-size: 14px;
+    }
+
+    .image-popup {
+        max-width: 96vw;
+        max-height: 90vh;
+        padding: 8px;
+    }
+
+    .image-popup-content {
+        max-width: 94vw;
+        max-height: 88vh;
+    }
+
+    .image-popup-image {
+        max-width: 94vw;
+        max-height: 88vh;
     }
 
 }
