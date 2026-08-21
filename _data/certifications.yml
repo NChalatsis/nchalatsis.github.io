@@ -6,12 +6,3 @@
   description: >
     Placeholder description for this certification.
   visibility: true
-
-- title: Example Previous Certification
-  date: 2025-06-01
-  image: certifications/example-previous-certification.png
-  summary: >
-    Example previous certification summary.
-  description: >
-    Placeholder description for this previous certification.
-  visibility: true
