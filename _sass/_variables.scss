@@ -1,1 +1,28 @@
+:root {
+    --portfolio-blue: #071a2f;
+    --portfolio-blue-dark: #05111f;
+    --portfolio-blue-deep: #061426;
+    --portfolio-blue-surface: #0a1f38;
 
+    --portfolio-orange: #ff7901;
+
+    --portfolio-text: #e6edf5;
+    --portfolio-text-soft: #d9e3ee;
+    --portfolio-text-muted: #9fb0c2;
+
+    --portfolio-border: rgba(255, 255, 255, 0.08);
+    --portfolio-orange-border: rgba(255, 121, 1, 0.35);
+
+    --portfolio-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.42),
+        0 4px 10px rgba(0, 0, 0, 0.26);
+
+    --portfolio-shadow-soft:
+        0 10px 24px rgba(0, 0, 0, 0.30);
+
+    --portfolio-highlight:
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+    --portfolio-depth:
+        inset 0 -1px 0 rgba(0, 0, 0, 0.30);
+}
