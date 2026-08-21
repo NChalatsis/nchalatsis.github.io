@@ -1,3 +1,8 @@
 - title: Example Course
   date: 2026-01-01
+  image: courses/example-course.png
+  summary: >
+    Example course summary.
+  description: >
+    Placeholder description for this course.
   visibility: true
