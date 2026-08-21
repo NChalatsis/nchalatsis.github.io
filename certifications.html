@@ -80,20 +80,49 @@ layout: default
 
               <div class="certification-entry-layout">
 
-                <!-- Certificate image -->
+                <!-- =================================================
+                     Certificate image + popup
+                     ================================================= -->
 
                 <div class="certification-image-wrapper">
 
-                  <img
-                    src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ certification.image }}"
-                    class="certification-image"
-                    alt="{{ certification.title }}"
-                  />
+                  <div class="image-popup-wrapper">
+
+                    <img
+                      src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ certification.image }}"
+                      class="certification-image image-popup-trigger"
+                      alt="{{ certification.title }}"
+                      role="button"
+                      tabindex="0"
+                      aria-expanded="false"
+                    />
+
+                    <div
+                      class="image-popup"
+                      role="dialog"
+                      aria-hidden="true"
+                    >
+
+                      <div class="image-popup-content">
+
+                        <img
+                          src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ certification.image }}"
+                          alt="{{ certification.title }}"
+                          class="image-popup-image"
+                        />
+
+                      </div>
+
+                    </div>
+
+                  </div>
 
                 </div>
 
 
-                <!-- Certificate information -->
+                <!-- =================================================
+                     Certificate information
+                     ================================================= -->
 
                 <div class="certification-content">
 
@@ -142,3 +171,64 @@ layout: default
   </div>
 
 </div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const popupWrappers = document.querySelectorAll(".image-popup-wrapper");
+
+  popupWrappers.forEach(function (wrapper) {
+
+    const trigger = wrapper.querySelector(".image-popup-trigger");
+    const popup = wrapper.querySelector(".image-popup");
+
+    if (!trigger || !popup) {
+      return;
+    }
+
+    function openPopup() {
+      popup.classList.add("is-open");
+      popup.setAttribute("aria-hidden", "false");
+      trigger.setAttribute("aria-expanded", "true");
+    }
+
+    function closePopup() {
+      popup.classList.remove("is-open");
+      popup.setAttribute("aria-hidden", "true");
+      trigger.setAttribute("aria-expanded", "false");
+    }
+
+    trigger.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      if (popup.classList.contains("is-open")) {
+        closePopup();
+      } else {
+        openPopup();
+      }
+    });
+
+    trigger.addEventListener("keydown", function (event) {
+
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+
+        if (popup.classList.contains("is-open")) {
+          closePopup();
+        } else {
+          openPopup();
+        }
+      }
+
+    });
+
+    popup.addEventListener("mouseleave", function () {
+      closePopup();
+    });
+
+  });
+
+});
+</script>
