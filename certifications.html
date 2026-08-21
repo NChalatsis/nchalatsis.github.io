@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="portfolio-section">
+
+  <h1>Certifications</h1>
+
+  {% assign certifications = site.data.certifications | sort: "date" | reverse %}
+
+  {% for certification in certifications %}
+
+    {% if certification.visibility == true %}
+
+    <article class="portfolio-item">
+
+      <h2>{{ certification.title }}</h2>
+
+      {% if certification.date %}
+      <p>{{ certification.date }}</p>
+      {% endif %}
+
+    </article>
+
+    {% endif %}
+
+  {% endfor %}
+
+</div>
