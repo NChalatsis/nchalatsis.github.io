@@ -2,28 +2,143 @@
 layout: default
 ---
 
-<div class="portfolio-section">
+<div class="courses-page">
 
-  <h1>Courses</h1>
+  <div class="col-lg-12">
 
-  {% assign courses = site.data.courses | sort: "date" | reverse %}
+    <div class="row courses-layout">
 
-  {% for course in courses %}
+      <!-- =====================================================
+           LEFT COLUMN - COURSE INDEX
+           ===================================================== -->
 
-    {% if course.visibility == true %}
+      <div class="col-lg-4 courses-sidebar-column">
 
-    <article class="portfolio-item">
+        <div class="card courses-index-card">
 
-      <h2>{{ course.title }}</h2>
+          <h1 class="card-title">
+            Courses
+          </h1>
 
-      {% if course.date %}
-      <p>{{ course.date }}</p>
-      {% endif %}
+          {% assign courses_index = site.data.courses
+            | sort: "date"
+            | reverse
+          %}
 
-    </article>
+          <div class="courses-index-group">
 
-    {% endif %}
+            <h3 class="courses-index-heading">
+              Courses
+            </h3>
 
-  {% endfor %}
+            {% for course in courses_index %}
+
+              {% if course.visibility == true %}
+
+              <a
+                class="course-index-item"
+                href="#course-{{ forloop.index }}"
+              >
+                <span class="course-index-title">
+                  {{ course.title }}
+                </span>
+              </a>
+
+              {% endif %}
+
+            {% endfor %}
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =====================================================
+           RIGHT COLUMN - COURSES
+           ===================================================== -->
+
+      <div class="col-lg-8 courses-main-column">
+
+        <section class="card courses-section">
+
+          <h1 class="card-title">
+            Courses
+          </h1>
+
+          <br />
+
+          {% for course in courses_index %}
+
+            {% if course.visibility == true %}
+
+            <article
+              class="course-entry"
+              id="course-{{ forloop.index }}"
+            >
+
+              <div class="course-entry-layout">
+
+                <!-- Course image -->
+
+                <div class="course-image-wrapper">
+
+                  <img
+                    src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ course.image }}"
+                    class="course-image"
+                    alt="{{ course.title }}"
+                  />
+
+                </div>
+
+
+                <!-- Course information -->
+
+                <div class="course-content">
+
+                  <div class="course-entry-header">
+
+                    <h2 class="course-title">
+                      {{ course.title }}
+                    </h2>
+
+                    {% if course.date %}
+                    <span class="course-date">
+                      {{ course.date | date: "%Y" }}
+                    </span>
+                    {% endif %}
+
+                  </div>
+
+                  {% if course.summary %}
+                  <p class="course-summary">
+                    {{ course.summary }}
+                  </p>
+                  {% endif %}
+
+                  {% if course.description %}
+                  <p class="course-description">
+                    {{ course.description }}
+                  </p>
+                  {% endif %}
+
+                </div>
+
+              </div>
+
+            </article>
+
+            {% endif %}
+
+          {% endfor %}
+
+        </section>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </div>
