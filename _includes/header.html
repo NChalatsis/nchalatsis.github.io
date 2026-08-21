@@ -1,98 +1,176 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="topNav">
+<nav class="portfolio-navbar" id="topNav">
 
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarNav"
-    aria-controls="navbarNav"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span
-      class="icono-hamburger"
-      id="navbar-hamburger"
-    ></span>
-  </button>
+  <div class="portfolio-navbar-inner">
+
+    <!-- Brand -->
+
+    <a
+      class="portfolio-brand"
+      href="{{ site.url }}{{ site.baseurl }}/"
+    >
+      {{ site.title }}
+    </a>
 
 
-  <a
-    class="navbar-brand"
-    href="{{ site.url }}{{ site.baseurl }}/"
-  >
-    {{ site.title }}
-  </a>
+    <!-- Mobile menu button -->
+
+    <button
+      class="portfolio-menu-toggle"
+      id="portfolio-menu-toggle"
+      type="button"
+      aria-label="Open navigation"
+      aria-expanded="false"
+      aria-controls="portfolio-navigation"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
 
-  <div
-    class="collapse navbar-collapse"
-    id="navbarNav"
-  >
+    <!-- Navigation -->
 
-    <ul class="navbar-nav">
+    <div
+      class="portfolio-navigation"
+      id="portfolio-navigation"
+    >
 
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          href="{{ site.url }}{{ site.baseurl }}/"
-        >
-          Home
-        </a>
-      </li>
+      <ul class="portfolio-nav-list">
 
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          href="{{ site.url }}{{ site.baseurl }}/about/"
-        >
-          About Me
-        </a>
-      </li>
+        <li class="portfolio-nav-item">
+          <a
+            class="portfolio-nav-link"
+            href="{{ site.url }}{{ site.baseurl }}/"
+          >
+            Home
+          </a>
+        </li>
 
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          href="{{ site.url }}{{ site.baseurl }}/projects/"
-        >
-          Projects
-        </a>
-      </li>
+        <li class="portfolio-nav-item">
+          <a
+            class="portfolio-nav-link"
+            href="{{ site.url }}{{ site.baseurl }}/about/"
+          >
+            About Me
+          </a>
+        </li>
 
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          href="{{ site.url }}{{ site.baseurl }}/certifications/"
-        >
-          Certifications
-        </a>
-      </li>
+        <li class="portfolio-nav-item">
+          <a
+            class="portfolio-nav-link"
+            href="{{ site.url }}{{ site.baseurl }}/projects/"
+          >
+            Projects
+          </a>
+        </li>
 
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          href="{{ site.url }}{{ site.baseurl }}/courses/"
-        >
-          Courses
-        </a>
-      </li>
+        <li class="portfolio-nav-item">
+          <a
+            class="portfolio-nav-link"
+            href="{{ site.url }}{{ site.baseurl }}/certifications/"
+          >
+            Certifications
+          </a>
+        </li>
 
-    </ul>
+        <li class="portfolio-nav-item">
+          <a
+            class="portfolio-nav-link"
+            href="{{ site.url }}{{ site.baseurl }}/courses/"
+          >
+            Courses
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
 
   </div>
-
-
-  <ul class="nav justify-content-end">
-
-    <li class="nav-item">
-      <input
-        class="nav-link switch theme-toggle"
-        type="checkbox"
-        name="checkbox"
-      />
-    </li>
-
-  </ul>
 
 </nav>
 
 <div id="progress-bar"></div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const menuButton = document.getElementById("portfolio-menu-toggle");
+  const navigation = document.getElementById("portfolio-navigation");
+
+  if (!menuButton || !navigation) {
+    return;
+  }
+
+  menuButton.addEventListener("click", function () {
+
+    const isOpen = navigation.classList.toggle("is-open");
+
+    menuButton.classList.toggle("is-open", isOpen);
+
+    menuButton.setAttribute(
+      "aria-expanded",
+      isOpen ? "true" : "false"
+    );
+
+    menuButton.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation" : "Open navigation"
+    );
+
+  });
+
+
+  /* Close menu after selecting a link */
+
+  const navigationLinks =
+    navigation.querySelectorAll(".portfolio-nav-link");
+
+  navigationLinks.forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+      navigation.classList.remove("is-open");
+      menuButton.classList.remove("is-open");
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+      menuButton.setAttribute(
+        "aria-label",
+        "Open navigation"
+      );
+
+    });
+
+  });
+
+
+  /* Close menu if viewport returns to desktop */
+
+  window.addEventListener("resize", function () {
+
+    if (window.innerWidth > 991) {
+
+      navigation.classList.remove("is-open");
+      menuButton.classList.remove("is-open");
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+      menuButton.setAttribute(
+        "aria-label",
+        "Open navigation"
+      );
+
+    }
+
+  });
+
+});
+</script>
