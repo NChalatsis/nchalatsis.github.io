@@ -1,25 +1,80 @@
-
 /* =========================================================
    About Page
    ========================================================= */
 
+
+/* =========================================================
+   Profile Card
+   ========================================================= */
+
+#profile-card {
+    text-align: center;
+}
+
+#profile-card .profile-img {
+    width: 150px;
+    height: 150px;
+
+    margin-left: 20px;
+
+    border-radius: 50%;
+}
+
+#profile-card .profile-name {
+    margin-top: 20px;
+}
+
+#profile-card .profile-bio,
+#profile-card .profile-links {
+    margin-top: 5px;
+}
+
+#profile-card .social-link {
+    color: var(--portfolio-orange) !important;
+
+    font-size: 15px;
+
+    padding: 5px;
+    margin: 2px;
+
+    text-decoration: none !important;
+
+    transition:
+        color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+#profile-card .social-link:hover {
+    color: #ff9a3c !important;
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   About - Education & Experience
+   ========================================================= */
+
 .about-data-entry {
     display: flex;
+
     align-items: flex-start;
 
     width: 100%;
 
     gap: 28px;
+
     margin: 0;
 }
 
 .about-data-logo {
     flex: 0 0 110px;
+
     width: 110px;
 }
 
 .about-data-content {
     flex: 1 1 auto;
+
     min-width: 0;
 }
 
@@ -49,28 +104,103 @@
 
 
 /* =========================================================
+   Profile / About Supporting Elements
+   ========================================================= */
+
+#profile-card h6 {
+    margin-top: 10px;
+}
+
+#profile-card h6 a {
+    text-decoration: none;
+}
+
+#profile-card h6 a:hover {
+    text-decoration: none;
+}
+
+
+/* =========================================================
    Mobile About
    ========================================================= */
 
 @media (max-width: 991px) {
 
+    #profile-card .profile-name {
+        color: var(--portfolio-orange) !important;
+
+        font-size: 24px;
+        font-weight: 600;
+
+        line-height: 1.2;
+    }
+
+    #profile-card .profile-bio {
+        color: #ffffff !important;
+
+        font-size: 16px;
+        font-weight: 500;
+
+        line-height: 1.35;
+    }
+
     .about-data-content .experience-title {
         color: var(--portfolio-orange) !important;
+
+        font-size: 22px;
+        font-weight: 600;
+
+        line-height: 1.25;
     }
 
     .about-data-content .experience-info {
         color: #edf3f9 !important;
+
+        font-size: 15px;
+        font-weight: 500;
+
+        line-height: 1.35;
     }
 
-    #profile-card .profile-name,
-    #profile-card h1,
-    #profile-card h2,
-    #profile-card h3 {
+    .about-data-content .experience-desc {
+        color: #dbe6f0 !important;
+
+        font-size: 13px;
+        font-weight: 400;
+
+        line-height: 1.6;
+    }
+
+    /* Skills heading */
+    #profile-card + .card > h1 {
         color: var(--portfolio-orange) !important;
     }
 
-    #profile-card .profile-name {
-        font-size: 22px;
+    /* Social icons */
+    #profile-card .profile-links .social-link,
+    #profile-card .profile-links .social-link i {
+        color: var(--portfolio-orange) !important;
+    }
+
+    /* Location / Greece */
+    #profile-card h6,
+    #profile-card h6 a {
+        color: #ffffff !important;
+    }
+
+    #profile-card h6 a i {
+        color: var(--portfolio-orange) !important;
+    }
+
+    /* URLs */
+    .about-data-content a {
+        color: var(--portfolio-orange) !important;
+
+        font-size: 11px !important;
+
+        line-height: 1.4;
+
+        word-break: break-word;
     }
 
 }
@@ -78,24 +208,111 @@
 
 @media (max-width: 576px) {
 
+    /* -----------------------------------------------------
+       Profile
+       ----------------------------------------------------- */
+
+    #profile-card .profile-name {
+        color: var(--portfolio-orange) !important;
+
+        font-size: 21px;
+        font-weight: 600;
+
+        line-height: 1.2;
+    }
+
+    #profile-card .profile-bio {
+        color: #ffffff !important;
+
+        font-size: 14px;
+        font-weight: 500;
+
+        line-height: 1.35;
+    }
+
+    #profile-card .social-link {
+        font-size: 14px;
+        padding: 4px;
+    }
+
+
+    /* -----------------------------------------------------
+       Education / Experience
+       ----------------------------------------------------- */
+
     .about-data-content .experience-title {
         color: var(--portfolio-orange) !important;
-        font-size: 21px;
+
+        font-size: 19px;
+        font-weight: 600;
+
+        line-height: 1.25;
     }
 
     .about-data-content .experience-info {
         color: #edf3f9 !important;
+
+        font-size: 13px;
+        font-weight: 500;
+
+        line-height: 1.35;
     }
 
-    #profile-card .profile-name,
-    #profile-card h1,
-    #profile-card h2,
-    #profile-card h3 {
+    .about-data-content .experience-desc {
+        color: #dbe6f0 !important;
+
+        font-size: 11px;
+        font-weight: 400;
+
+        line-height: 1.55;
+    }
+
+
+    /* -----------------------------------------------------
+       Skills
+       ----------------------------------------------------- */
+
+    #profile-card + .card > h1 {
+        color: var(--portfolio-orange) !important;
+
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+
+    /* -----------------------------------------------------
+       Social Icons + Location
+       ----------------------------------------------------- */
+
+    #profile-card .profile-links .social-link,
+    #profile-card .profile-links .social-link i {
         color: var(--portfolio-orange) !important;
     }
 
-    #profile-card .profile-name {
-        font-size: 20px;
+    #profile-card h6,
+    #profile-card h6 a {
+        color: #ffffff !important;
+
+        font-size: 10px !important;
+    }
+
+    #profile-card h6 a i {
+        color: var(--portfolio-orange) !important;
+    }
+
+
+    /* -----------------------------------------------------
+       URLs
+       ----------------------------------------------------- */
+
+    .about-data-content a {
+        color: var(--portfolio-orange) !important;
+
+        font-size: 10px !important;
+
+        line-height: 1.35;
+
+        word-break: break-word;
     }
 
 }
