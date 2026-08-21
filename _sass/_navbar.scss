@@ -1,6 +1,118 @@
-
 /* =========================================================
    Navigation
+   ========================================================= */
+
+
+/* =========================================================
+   Main Navigation
+   ========================================================= */
+
+#topNav {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    z-index: 2000;
+
+    width: 100%;
+
+    padding-left: 15%;
+    padding-right: 15%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0a2038 0%,
+            #061426 100%
+        ) !important;
+
+    border-bottom: 1px solid rgba(255, 121, 1, 0.28);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.36),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.04);
+}
+
+
+/* =========================================================
+   Navbar Brand
+   ========================================================= */
+
+.navbar-dark .navbar-brand,
+.navbar-brand {
+    color: var(--portfolio-orange) !important;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    line-height: 1;
+
+    text-decoration: none !important;
+
+    white-space: nowrap;
+}
+
+.navbar-dark .navbar-brand:hover,
+.navbar-brand:hover {
+    color: #ff8c26 !important;
+
+    text-decoration: none !important;
+}
+
+
+/* =========================================================
+   Navbar Links
+   ========================================================= */
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-nav .nav-link {
+    color: #cdd9e6 !important;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    border-radius: 7px;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(11, 39, 69, 0.85),
+            rgba(7, 26, 47, 0.85)
+        );
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   Navbar Toggler
+   ========================================================= */
+
+.navbar-dark .navbar-toggler {
+    border-color: transparent !important;
+}
+
+#navbar-hamburger,
+#navbar-search {
+    color: #e6edf5 !important;
+}
+
+
+/* =========================================================
+   Custom Portfolio Navigation Classes
    ========================================================= */
 
 .portfolio-navbar {
@@ -29,6 +141,7 @@
 
 .portfolio-navbar-inner {
     display: flex;
+
     align-items: center;
 
     width: 100%;
@@ -79,6 +192,7 @@
 
 .portfolio-nav-list {
     display: flex;
+
     align-items: center;
 
     margin: 0;
@@ -129,7 +243,7 @@
 
 
 /* =========================================================
-   Mobile Navigation Button
+   Mobile Menu Button
    ========================================================= */
 
 .portfolio-menu-toggle {
@@ -188,4 +302,122 @@
 
 .portfolio-menu-toggle.is-open span:nth-child(3) {
     transform: translateY(-6px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   Legacy Mobile Navbar Rules
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    #topNav {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .navbar-brand {
+        display: inline-block;
+
+        padding-top: .3125rem;
+        padding-bottom: .3125rem;
+
+        margin-right: 1rem;
+
+        font-size: 1.25rem;
+
+        line-height: inherit;
+
+        white-space: nowrap;
+    }
+
+}
+
+
+/* =========================================================
+   Custom Mobile Navigation
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .portfolio-navbar-inner {
+        min-height: 64px;
+
+        padding: 0 20px;
+    }
+
+    .portfolio-menu-toggle {
+        display: block;
+    }
+
+    .portfolio-navigation {
+        position: absolute;
+
+        top: 64px;
+        left: 0;
+
+        width: 100%;
+
+        margin: 0;
+
+        padding: 10px 20px 18px;
+
+        background:
+            linear-gradient(
+                180deg,
+                #0a2038 0%,
+                #061426 100%
+            );
+
+        border-top: 1px solid rgba(255, 255, 255, 0.04);
+
+        border-bottom: 1px solid rgba(255, 121, 1, 0.22);
+
+        box-shadow:
+            0 12px 24px rgba(0, 0, 0, 0.34);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transform: translateY(-10px);
+
+        transition:
+            opacity 0.2s ease,
+            visibility 0.2s ease,
+            transform 0.2s ease;
+    }
+
+    .portfolio-navigation.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        transform: translateY(0);
+    }
+
+    .portfolio-nav-list {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+    }
+
+    .portfolio-nav-item {
+        width: 100%;
+    }
+
+    .portfolio-nav-link {
+        width: 100%;
+
+        padding: 11px 12px;
+
+        font-size: 15px;
+
+        box-sizing: border-box;
+    }
+
 }
