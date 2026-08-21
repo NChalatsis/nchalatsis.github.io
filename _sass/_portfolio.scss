@@ -129,3 +129,36 @@ body {
 .about-data-content p {
     max-width: none;
 }
+
+/* =========================================================
+   Skills
+   ========================================================= */
+
+.skills-group {
+    margin-top: 20px;
+}
+
+.skills-group-title {
+    margin: 20px 0 12px;
+    color: #ffffff !important;
+    font-size: 18px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-item {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 14px;
+
+    background: rgba(7, 26, 47, 0.9);
+    border: 1px solid rgba(255, 121, 1, 0.22);
+
+    color: #dbe7f5;
+    font-size: 13px;
+    line-height: 1.2;
+}
