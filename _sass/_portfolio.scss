@@ -130,53 +130,57 @@ body {
     max-width: none;
 }
 
+
 /* =========================================================
-   Skills
+   Skills - Pill Tags
    ========================================================= */
 
 .skills-group {
-    margin-top: 20px;
+    margin-top: 18px;
 }
 
 .skills-group-title {
     margin: 20px 0 12px;
     color: #ffffff !important;
     font-size: 18px;
+    font-weight: 500;
 }
 
 .skills-list {
-    display: flex;
+    display: flex !important;
     flex-wrap: wrap;
-    gap: 9px;
+    gap: 10px;
+    width: 100%;
 }
 
 .skill-item {
-    display: inline-flex;
+    display: inline-flex !important;
     align-items: center;
     justify-content: center;
 
-    padding: 7px 15px;
+    padding: 7px 14px;
 
-    background: rgba(7, 26, 47, 0.92);
-    border: 1px solid rgba(255, 121, 1, 0.28);
+    background: #071a2f !important;
+    border: 1px solid rgba(255, 121, 1, 0.35);
 
-    border-radius: 999px;
+    border-radius: 999px !important;
 
-    color: #e6edf5;
+    color: #e6edf5 !important;
     font-size: 13px;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1;
 
     white-space: nowrap;
+    box-sizing: border-box;
 
     transition:
         transform 0.2s ease,
-        border-color 0.2s ease,
-        background-color 0.2s ease;
+        background-color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .skill-item:hover {
     transform: translateY(-2px);
-    background: rgba(11, 31, 56, 0.98);
-    border-color: rgba(255, 121, 1, 0.55);
+    background: #0b2745 !important;
+    border-color: rgba(255, 121, 1, 0.65);
 }
