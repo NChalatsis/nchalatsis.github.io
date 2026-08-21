@@ -1,16 +1,18 @@
 - title: Example Data Engineering Project
   type: project
   date: 2026-01-01
+  github_url: https://github.com/NChalatsis/example-project
   summary: >
     Example project demonstrating a data engineering workflow.
   description: >
     This is a placeholder project description. Later we will replace it
-    with the real project information, technologies, links, and details.
+    with the real project information.
   visibility: true
 
 - title: Example Mini Project
   type: mini-project
   date: 2025-10-01
+  github_url: https://github.com/NChalatsis/example-mini-project
   summary: >
     Example smaller project.
   description: >
