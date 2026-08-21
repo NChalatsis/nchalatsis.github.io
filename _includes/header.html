@@ -1,4 +1,5 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="topNav">
+
   <button
     class="navbar-toggler"
     type="button"
@@ -8,29 +9,80 @@
     aria-expanded="false"
     aria-label="Toggle navigation"
   >
-    <span class="icono-hamburger" id="navbar-hamburger"></span>
+    <span
+      class="icono-hamburger"
+      id="navbar-hamburger"
+    ></span>
   </button>
 
-  <a class="navbar-brand" href="{{ site.url }}{{ site.baseurl }}/">
+
+  <a
+    class="navbar-brand"
+    href="{{ site.url }}{{ site.baseurl }}/"
+  >
     {{ site.title }}
   </a>
 
-  <div class="collapse navbar-collapse" id="navbarNav">
+
+  <div
+    class="collapse navbar-collapse"
+    id="navbarNav"
+  >
+
     <ul class="navbar-nav">
-      {% for i in site.urls %}
+
       <li class="nav-item">
         <a
           class="nav-link"
-          href="{{ site.url }}{{ site.baseurl }}{{ i.url }}"
+          href="{{ site.url }}{{ site.baseurl }}/"
         >
-          {{ i.text }}
+          Home
         </a>
       </li>
-      {% endfor %}
+
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="{{ site.url }}{{ site.baseurl }}/about/"
+        >
+          About Me
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="{{ site.url }}{{ site.baseurl }}/projects/"
+        >
+          Projects
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="{{ site.url }}{{ site.baseurl }}/certifications/"
+        >
+          Certifications
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="{{ site.url }}{{ site.baseurl }}/courses/"
+        >
+          Courses
+        </a>
+      </li>
+
     </ul>
+
   </div>
 
+
   <ul class="nav justify-content-end">
+
     <li class="nav-item">
       <input
         class="nav-link switch theme-toggle"
@@ -38,7 +90,9 @@
         name="checkbox"
       />
     </li>
+
   </ul>
+
 </nav>
 
 <div id="progress-bar"></div>
