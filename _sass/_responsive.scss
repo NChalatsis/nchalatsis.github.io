@@ -103,7 +103,6 @@
        ABOUT
        ===================================================== */
 
-    /* Main name */
     #profile-card .profile-name {
         color: var(--portfolio-orange) !important;
 
@@ -112,7 +111,6 @@
         line-height: 1.2;
     }
 
-    /* Professional subtitle */
     #profile-card .profile-bio {
         color: #ffffff !important;
 
@@ -121,7 +119,6 @@
         line-height: 1.35;
     }
 
-    /* Education / Experience title */
     .about-data-content .experience-title {
         color: var(--portfolio-orange) !important;
 
@@ -130,7 +127,6 @@
         line-height: 1.25;
     }
 
-    /* Company / university */
     .about-data-content .experience-info {
         color: #edf3f9 !important;
 
@@ -139,7 +135,6 @@
         line-height: 1.35;
     }
 
-    /* Secondary information */
     .about-data-content .experience-desc {
         color: #dbe6f0 !important;
 
@@ -153,7 +148,6 @@
        PROJECTS / CERTIFICATIONS / COURSES
        ===================================================== */
 
-    /* Primary title */
     .project-title,
     .certification-title,
     .course-title {
@@ -164,7 +158,6 @@
         line-height: 1.25;
     }
 
-    /* Summary */
     .project-summary,
     .certification-summary,
     .course-summary {
@@ -175,7 +168,6 @@
         line-height: 1.55;
     }
 
-    /* Description */
     .project-description,
     .certification-description,
     .course-description {
@@ -186,7 +178,6 @@
         line-height: 1.65;
     }
 
-    /* Dates */
     .project-date,
     .certification-date,
     .course-date {
@@ -197,7 +188,6 @@
         line-height: 1.3;
     }
 
-    /* GitHub */
     .project-github a {
         color: var(--portfolio-orange) !important;
 
@@ -207,8 +197,44 @@
 
 
     /* =====================================================
-       Hide left sidebar
+       Skills
        ===================================================== */
+
+    .skills-group-title {
+        color: #ffffff !important;
+    }
+
+    .skill-item {
+        color: #ffffff !important;
+
+        font-size: 12px;
+    }
+
+
+    /* =====================================================
+       URLs / secondary links
+       ===================================================== */
+
+    .about-data-content a {
+        color: var(--portfolio-orange) !important;
+
+        font-size: 11px !important;
+        line-height: 1.4;
+
+        word-break: break-word;
+    }
+
+    .project-github a {
+        color: var(--portfolio-orange) !important;
+
+        font-size: 11px !important;
+        line-height: 1.4;
+    }
+
+
+    /* -----------------------------------------------------
+       Hide left sidebar
+       ----------------------------------------------------- */
 
     .projects-sidebar-column,
     .certifications-sidebar-column,
@@ -262,17 +288,6 @@
         height: 120px;
     }
 
-
-    /* -----------------------------------------------------
-       Skills
-       ----------------------------------------------------- */
-
-    .skill-item {
-        padding: 6px 11px;
-
-        font-size: 12px;
-    }
-
 }
 
 
@@ -302,10 +317,9 @@
 
 
     /* =====================================================
-       ABOUT - strongest hierarchy
+       ABOUT
        ===================================================== */
 
-    /* 1. Name */
     #profile-card .profile-name {
         color: var(--portfolio-orange) !important;
 
@@ -314,7 +328,6 @@
         line-height: 1.2;
     }
 
-    /* 2. Professional title */
     #profile-card .profile-bio {
         color: #ffffff !important;
 
@@ -323,7 +336,6 @@
         line-height: 1.35;
     }
 
-    /* 3. Work / Education title */
     .about-data-content .experience-title {
         color: var(--portfolio-orange) !important;
 
@@ -332,7 +344,6 @@
         line-height: 1.25;
     }
 
-    /* 4. Company / University */
     .about-data-content .experience-info {
         color: #edf3f9 !important;
 
@@ -341,7 +352,6 @@
         line-height: 1.35;
     }
 
-    /* 5. Details */
     .about-data-content .experience-desc {
         color: #dbe6f0 !important;
 
@@ -355,7 +365,6 @@
        PROJECTS / CERTIFICATIONS / COURSES
        ===================================================== */
 
-    /* 1. Title */
     .project-title,
     .certification-title,
     .course-title {
@@ -366,7 +375,6 @@
         line-height: 1.25;
     }
 
-    /* 2. Summary */
     .project-summary,
     .certification-summary,
     .course-summary {
@@ -377,7 +385,6 @@
         line-height: 1.5;
     }
 
-    /* 3. Description */
     .project-description,
     .certification-description,
     .course-description {
@@ -388,7 +395,6 @@
         line-height: 1.55;
     }
 
-    /* 4. Metadata */
     .project-date,
     .certification-date,
     .course-date {
@@ -399,7 +405,6 @@
         line-height: 1.25;
     }
 
-    /* 5. GitHub */
     .project-github a {
         color: var(--portfolio-orange) !important;
 
@@ -409,7 +414,7 @@
 
 
     /* -----------------------------------------------------
-       Main card title
+       Page titles
        ----------------------------------------------------- */
 
     .card-title {
@@ -422,7 +427,45 @@
 
 
     /* -----------------------------------------------------
-       Hide sidebars completely
+       Skills
+       ----------------------------------------------------- */
+
+    .skills-group-title {
+        color: #ffffff !important;
+
+        font-size: 17px;
+    }
+
+    .skill-item {
+        color: #ffffff !important;
+
+        font-size: 11px;
+    }
+
+
+    /* -----------------------------------------------------
+       URLs / secondary links
+       ----------------------------------------------------- */
+
+    .about-data-content a {
+        color: var(--portfolio-orange) !important;
+
+        font-size: 10px !important;
+        line-height: 1.35;
+
+        word-break: break-word;
+    }
+
+    .project-github a {
+        color: var(--portfolio-orange) !important;
+
+        font-size: 10px !important;
+        line-height: 1.35;
+    }
+
+
+    /* -----------------------------------------------------
+       Hide sidebars
        ----------------------------------------------------- */
 
     .projects-sidebar-column,
@@ -452,7 +495,7 @@
 
 
     /* -----------------------------------------------------
-       Built & maintained badge
+       Built & Maintained badge
        ----------------------------------------------------- */
 
     .built-by-badge {
@@ -488,17 +531,6 @@
     .certification-entry,
     .course-entry {
         padding: 16px 0;
-    }
-
-
-    /* -----------------------------------------------------
-       Skills
-       ----------------------------------------------------- */
-
-    .skill-item {
-        padding: 5px 10px;
-
-        font-size: 11px;
     }
 
 
