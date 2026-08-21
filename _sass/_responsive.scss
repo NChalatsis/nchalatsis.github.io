@@ -1,5 +1,6 @@
 /* =========================================================
    Responsive / Mobile
+   Typography hierarchy and layout
    ========================================================= */
 
 
@@ -10,7 +11,7 @@
 @media (max-width: 991px) {
 
     /* -----------------------------------------------------
-       Mobile Navigation
+       Navigation
        ----------------------------------------------------- */
 
     .portfolio-navbar-inner {
@@ -31,7 +32,6 @@
         width: 100%;
 
         margin: 0;
-
         padding: 10px 20px 18px;
 
         background:
@@ -69,11 +69,8 @@
 
     .portfolio-nav-list {
         display: flex;
-
         flex-direction: column;
-
         align-items: stretch;
-
         width: 100%;
     }
 
@@ -83,21 +80,17 @@
 
     .portfolio-nav-link {
         width: 100%;
-
         padding: 11px 12px;
-
         font-size: 15px;
-
         box-sizing: border-box;
     }
 
 
     /* -----------------------------------------------------
-       General Mobile Text Contrast + Smaller Typography
+       Global mobile text contrast
        ----------------------------------------------------- */
 
     body {
-        font-size: 14px;
         color: #edf3f9;
     }
 
@@ -105,91 +98,117 @@
         color: #edf3f9;
     }
 
-    .card-title,
+
+    /* =====================================================
+       ABOUT
+       ===================================================== */
+
+    /* Main name */
+    #profile-card .profile-name {
+        color: var(--portfolio-orange) !important;
+
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.2;
+    }
+
+    /* Professional subtitle */
+    #profile-card .profile-bio {
+        color: #ffffff !important;
+
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.35;
+    }
+
+    /* Education / Experience title */
+    .about-data-content .experience-title {
+        color: var(--portfolio-orange) !important;
+
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 1.25;
+    }
+
+    /* Company / university */
+    .about-data-content .experience-info {
+        color: #edf3f9 !important;
+
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.35;
+    }
+
+    /* Secondary information */
+    .about-data-content .experience-desc {
+        color: #dbe6f0 !important;
+
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.6;
+    }
+
+
+    /* =====================================================
+       PROJECTS / CERTIFICATIONS / COURSES
+       ===================================================== */
+
+    /* Primary title */
     .project-title,
     .certification-title,
     .course-title {
         color: #ffffff !important;
-    }
 
-    .project-title,
-    .certification-title,
-    .course-title {
         font-size: 22px;
-        line-height: 1.3;
+        font-weight: 600;
+        line-height: 1.25;
     }
 
+    /* Summary */
     .project-summary,
     .certification-summary,
     .course-summary {
         color: #edf3f9 !important;
 
         font-size: 14px;
+        font-weight: 500;
         line-height: 1.55;
     }
 
+    /* Description */
     .project-description,
     .certification-description,
     .course-description {
         color: #dbe6f0 !important;
 
         font-size: 13px;
-        line-height: 1.6;
+        font-weight: 400;
+        line-height: 1.65;
     }
 
+    /* Dates */
     .project-date,
     .certification-date,
     .course-date {
-        color: #c0cfde !important;
+        color: #bfcddb !important;
 
-        font-size: 12px;
-    }
-
-    .project-github a {
-        color: var(--portfolio-orange) !important;
-
-        font-size: 13px;
-    }
-
-
-    /* -----------------------------------------------------
-       About - Mobile Titles
-       ----------------------------------------------------- */
-
-    #profile-card .profile-name,
-    #profile-card h1,
-    #profile-card h2,
-    #profile-card h3 {
-        color: var(--portfolio-orange) !important;
-    }
-
-    #profile-card .profile-name {
-        font-size: 20px;
-    }
-
-    .about-data-content .experience-title {
-        color: var(--portfolio-orange) !important;
-
-        font-size: 20px;
+        font-size: 11px;
+        font-weight: 400;
         line-height: 1.3;
     }
 
-    .about-data-content .experience-info {
-        color: #edf3f9 !important;
+    /* GitHub */
+    .project-github a {
+        color: var(--portfolio-orange) !important;
 
-        font-size: 13px;
-    }
-
-    .about-data-content .experience-desc {
-        font-size: 13px;
-
-        line-height: 1.6;
+        font-size: 12px;
+        font-weight: 500;
     }
 
 
-    /* -----------------------------------------------------
-       Hide Sidebars
-       ----------------------------------------------------- */
+    /* =====================================================
+       Hide left sidebar
+       ===================================================== */
 
     .projects-sidebar-column,
     .certifications-sidebar-column,
@@ -201,9 +220,8 @@
     .certifications-main-column,
     .courses-main-column {
         width: 100%;
-
-        flex: 0 0 100%;
         max-width: 100%;
+        flex: 0 0 100%;
     }
 
     .projects-page .col-lg-8,
@@ -211,22 +229,19 @@
     .courses-page .col-lg-8 {
         width: 100%;
         max-width: 100%;
-
         flex: 0 0 100%;
     }
 
 
     /* -----------------------------------------------------
-       Mobile Entries
+       Entry layouts
        ----------------------------------------------------- */
 
     .project-entry-header,
     .certification-entry-header,
     .course-entry-header {
         align-items: flex-start;
-
         flex-direction: column;
-
         gap: 5px;
     }
 
@@ -238,7 +253,6 @@
     .certification-image-wrapper,
     .course-image-wrapper {
         flex: 0 0 auto;
-
         width: 100%;
     }
 
@@ -283,114 +297,132 @@
 
     .portfolio-nav-link {
         padding: 10px 11px;
-
         font-size: 14px;
     }
 
 
-    /* -----------------------------------------------------
-       General Typography
-       ----------------------------------------------------- */
+    /* =====================================================
+       ABOUT - strongest hierarchy
+       ===================================================== */
 
-    body {
-        font-size: 13px;
-        color: #edf3f9;
+    /* 1. Name */
+    #profile-card .profile-name {
+        color: var(--portfolio-orange) !important;
+
+        font-size: 21px;
+        font-weight: 600;
+        line-height: 1.2;
     }
 
-    .card {
-        color: #edf3f9;
-    }
-
-    .card-title {
+    /* 2. Professional title */
+    #profile-card .profile-bio {
         color: #ffffff !important;
 
-        font-size: 24px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.35;
+    }
+
+    /* 3. Work / Education title */
+    .about-data-content .experience-title {
+        color: var(--portfolio-orange) !important;
+
+        font-size: 19px;
+        font-weight: 600;
         line-height: 1.25;
     }
 
+    /* 4. Company / University */
+    .about-data-content .experience-info {
+        color: #edf3f9 !important;
 
-    /* -----------------------------------------------------
-       Main Content
-       ----------------------------------------------------- */
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.35;
+    }
 
+    /* 5. Details */
+    .about-data-content .experience-desc {
+        color: #dbe6f0 !important;
+
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 1.55;
+    }
+
+
+    /* =====================================================
+       PROJECTS / CERTIFICATIONS / COURSES
+       ===================================================== */
+
+    /* 1. Title */
     .project-title,
     .certification-title,
     .course-title {
         color: #ffffff !important;
 
-        font-size: 20px;
-        line-height: 1.3;
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 1.25;
     }
 
+    /* 2. Summary */
     .project-summary,
     .certification-summary,
     .course-summary {
         color: #edf3f9 !important;
 
         font-size: 13px;
+        font-weight: 500;
         line-height: 1.5;
     }
 
+    /* 3. Description */
     .project-description,
     .certification-description,
     .course-description {
         color: #dbe6f0 !important;
 
-        font-size: 12px;
+        font-size: 11px;
+        font-weight: 400;
         line-height: 1.55;
     }
 
+    /* 4. Metadata */
     .project-date,
     .certification-date,
     .course-date {
         color: #c6d5e3 !important;
 
-        font-size: 11px;
-    }
-
-    .project-github a {
-        font-size: 12px;
-    }
-
-
-    /* -----------------------------------------------------
-       About - Smaller Typography
-       ----------------------------------------------------- */
-
-    #profile-card .profile-name {
-        color: var(--portfolio-orange) !important;
-
-        font-size: 18px;
+        font-size: 10px;
+        font-weight: 400;
         line-height: 1.25;
     }
 
-    #profile-card .profile-bio {
-        font-size: 13px;
-        line-height: 1.5;
-    }
-
-    .about-data-content .experience-title {
+    /* 5. GitHub */
+    .project-github a {
         color: var(--portfolio-orange) !important;
 
-        font-size: 18px;
-        line-height: 1.3;
-    }
-
-    .about-data-content .experience-info {
-        color: #edf3f9 !important;
-
-        font-size: 12px;
-    }
-
-    .about-data-content .experience-desc {
-        font-size: 12px;
-
-        line-height: 1.55;
+        font-size: 11px;
+        font-weight: 500;
     }
 
 
     /* -----------------------------------------------------
-       Hide Sidebars Completely
+       Main card title
+       ----------------------------------------------------- */
+
+    .card-title {
+        color: #ffffff !important;
+
+        font-size: 21px;
+        font-weight: 600;
+        line-height: 1.25;
+    }
+
+
+    /* -----------------------------------------------------
+       Hide sidebars completely
        ----------------------------------------------------- */
 
     .projects-sidebar-column,
@@ -420,7 +452,7 @@
 
 
     /* -----------------------------------------------------
-       Built & Maintained Badge
+       Built & maintained badge
        ----------------------------------------------------- */
 
     .built-by-badge {
@@ -434,7 +466,6 @@
         border-radius: 10px;
 
         font-size: 5px !important;
-
         line-height: 1;
     }
 
@@ -443,17 +474,14 @@
         height: 12px;
     }
 
-    .built-by-badge span {
-        font-size: 5px !important;
-    }
-
+    .built-by-badge span,
     .built-by-badge strong {
         font-size: 5px !important;
     }
 
 
     /* -----------------------------------------------------
-       Entry Spacing
+       Entry spacing
        ----------------------------------------------------- */
 
     .project-entry,
