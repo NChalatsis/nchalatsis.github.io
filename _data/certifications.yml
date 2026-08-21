@@ -1,6 +1,6 @@
 - title: Example Certification
   date: 2026-01-01
-  image: example-certification.png
+  image: certifications/example-certification.png
   summary: >
     Example certification summary.
   description: >
@@ -9,7 +9,7 @@
 
 - title: Example Previous Certification
   date: 2025-06-01
-  image: example-previous-certification.png
+  image: certifications/example-previous-certification.png
   summary: >
     Example previous certification summary.
   description: >
