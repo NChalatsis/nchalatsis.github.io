@@ -194,76 +194,6 @@ layout: default
 
 
       <!-- ===================================================
-           EDUCATION
-           =================================================== -->
-
-      <div class="card">
-
-        <h1 class="card-title">
-          Education
-        </h1>
-
-        <br />
-
-        {% assign education_items = site.data.education
-          | sort: "start_date"
-          | reverse
-        %}
-
-        {% for education in education_items %}
-
-          {% if education.visibility == true %}
-
-          <div class="about-data-entry education-entry">
-
-            <div class="about-data-logo">
-
-              <img
-                src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ education.university_logo }}"
-                class="education-logo"
-                alt="{{ education.university_name }}"
-              />
-
-            </div>
-
-            <div class="about-data-content">
-
-              <h4 class="experience-title">
-                {{ education.degree }}
-              </h4>
-
-              <h6 class="experience-info">
-                {{ education.university_name }}
-              </h6>
-
-              <p class="experience-desc">
-                {{ education.period }}
-              </p>
-
-              <p class="experience-desc">
-                {{ education.description }}
-              </p>
-
-              {% if education.university_url %}
-              <p>
-                <a href="{{ education.university_url }}">
-                  {{ education.university_url }}
-                </a>
-              </p>
-              {% endif %}
-
-            </div>
-
-          </div>
-
-          {% endif %}
-
-        {% endfor %}
-
-      </div>
-
-
-      <!-- ===================================================
            WORK EXPERIENCE
            =================================================== -->
 
@@ -318,6 +248,76 @@ layout: default
               <p>
                 <a href="{{ experience.company_url }}">
                   {{ experience.company_url }}
+                </a>
+              </p>
+              {% endif %}
+
+            </div>
+
+          </div>
+
+          {% endif %}
+
+        {% endfor %}
+
+      </div>
+
+
+      <!-- ===================================================
+           EDUCATION
+           =================================================== -->
+
+      <div class="card">
+
+        <h1 class="card-title">
+          Education
+        </h1>
+
+        <br />
+
+        {% assign education_items = site.data.education
+          | sort: "start_date"
+          | reverse
+        %}
+
+        {% for education in education_items %}
+
+          {% if education.visibility == true %}
+
+          <div class="about-data-entry education-entry">
+
+            <div class="about-data-logo">
+
+              <img
+                src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ education.university_logo }}"
+                class="education-logo"
+                alt="{{ education.university_name }}"
+              />
+
+            </div>
+
+            <div class="about-data-content">
+
+              <h4 class="experience-title">
+                {{ education.degree }}
+              </h4>
+
+              <h6 class="experience-info">
+                {{ education.university_name }}
+              </h6>
+
+              <p class="experience-desc">
+                {{ education.period }}
+              </p>
+
+              <p class="experience-desc">
+                {{ education.description }}
+              </p>
+
+              {% if education.university_url %}
+              <p>
+                <a href="{{ education.university_url }}">
+                  {{ education.university_url }}
                 </a>
               </p>
               {% endif %}
