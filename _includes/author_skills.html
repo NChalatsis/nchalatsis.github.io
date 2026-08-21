@@ -5,22 +5,17 @@
 
     <div class="skills-list">
       {% for skill in site.data.skills.technical %}
-        <span class="skill-item">
-          {{ skill }}
-        </span>
+        <span class="skill-item">{{ skill }}</span>
       {% endfor %}
     </div>
   {% endif %}
-
 
   {% if site.data.skills.tools %}
     <h3 class="skills-group-title">Tools</h3>
 
     <div class="skills-list">
       {% for skill in site.data.skills.tools %}
-        <span class="skill-item">
-          {{ skill }}
-        </span>
+        <span class="skill-item">{{ skill }}</span>
       {% endfor %}
     </div>
   {% endif %}
