@@ -2,28 +2,136 @@
 layout: default
 ---
 
-<div class="portfolio-section">
+<div class="certifications-page">
 
-  <h1>Certifications</h1>
+  <div class="col-lg-12">
 
-  {% assign certifications = site.data.certifications | sort: "date" | reverse %}
+    <div class="row certifications-layout">
 
-  {% for certification in certifications %}
+      <!-- =====================================================
+           LEFT COLUMN - CERTIFICATION INDEX
+           ===================================================== -->
 
-    {% if certification.visibility == true %}
+      <div class="col-lg-4 certifications-sidebar-column">
 
-    <article class="portfolio-item">
+        <div class="card certifications-index-card">
 
-      <h2>{{ certification.title }}</h2>
+          <h1 class="card-title">
+            Certifications
+          </h1>
 
-      {% if certification.date %}
-      <p>{{ certification.date }}</p>
-      {% endif %}
+          {% assign certifications_index = site.data.certifications
+            | sort: "date"
+            | reverse
+          %}
 
-    </article>
+          <div class="certifications-index-group">
 
-    {% endif %}
+            <h3 class="certifications-index-heading">
+              Certifications
+            </h3>
 
-  {% endfor %}
+            {% for certification in certifications_index %}
+
+              {% if certification.visibility == true %}
+
+              <a
+                class="certification-index-item"
+                href="#certification-{{ forloop.index }}"
+              >
+                <span class="certification-index-title">
+                  {{ certification.title }}
+                </span>
+              </a>
+
+              {% endif %}
+
+            {% endfor %}
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =====================================================
+           RIGHT COLUMN - CERTIFICATION CONTENT
+           ===================================================== -->
+
+      <div class="col-lg-8 certifications-main-column">
+
+        <section class="card certifications-section">
+
+          <h1 class="card-title">
+            Certifications
+          </h1>
+
+          {% for certification in certifications_index %}
+
+            {% if certification.visibility == true %}
+
+            <article
+              class="certification-entry"
+              id="certification-{{ forloop.index }}"
+            >
+
+              <div class="certification-entry-layout">
+
+                <div class="certification-image-wrapper">
+
+                  <img
+                    src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ certification.image }}"
+                    class="certification-image"
+                    alt="{{ certification.title }}"
+                  />
+
+                </div>
+
+                <div class="certification-content">
+
+                  <div class="certification-entry-header">
+
+                    <h2 class="certification-title">
+                      {{ certification.title }}
+                    </h2>
+
+                    {% if certification.date %}
+                    <span class="certification-date">
+                      {{ certification.date | date: "%Y" }}
+                    </span>
+                    {% endif %}
+
+                  </div>
+
+                  {% if certification.summary %}
+                  <p class="certification-summary">
+                    {{ certification.summary }}
+                  </p>
+                  {% endif %}
+
+                  {% if certification.description %}
+                  <p class="certification-description">
+                    {{ certification.description }}
+                  </p>
+                  {% endif %}
+
+                </div>
+
+              </div>
+
+            </article>
+
+            {% endif %}
+
+          {% endfor %}
+
+        </section>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </div>
