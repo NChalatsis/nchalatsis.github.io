@@ -1,4 +1,25 @@
+/* =========================================================
+   Portfolio + Legacy Theme Variables
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   Legacy Sass variables
+   --------------------------------------------------------- */
+
+$body-typeface: 'Quicksand', sans-serif;
+$nav-typeface: 'Gill sans';
+$mono-typeface: Menlo, Monaco, monospace;
+$text-width: 650px;
+
+
+/* ---------------------------------------------------------
+   Portfolio variables
+   --------------------------------------------------------- */
+
 :root {
+
+    /* Portfolio colors */
+
     --portfolio-blue: #071a2f;
     --portfolio-blue-dark: #05111f;
     --portfolio-blue-deep: #061426;
@@ -25,4 +46,67 @@
 
     --portfolio-depth:
         inset 0 -1px 0 rgba(0, 0, 0, 0.30);
+
+
+    /* -----------------------------------------------------
+       Legacy theme compatibility
+       ----------------------------------------------------- */
+
+    --bold-color: #ffffff;
+
+    --box-background-color:
+        #071a2f;
+
+    --highlight-color:
+        #9fb0c2;
+
+    --light-border-color:
+        rgba(255, 255, 255, 0.08);
+
+    --light-text-color:
+        #d9e3ee;
+
+    --link-color:
+        #ff7901;
+
+    --link-color-visited:
+        #ff7901;
+
+    --main-background-color:
+        #050b14;
+
+    --main-text-color:
+        #e6edf5;
+
+    --medium-text-color:
+        #c7d3df;
+
+    --sidebar-color:
+        #071a2f;
+
+    --underline-color:
+        #9fb0c2;
+
+    --social-link-color:
+        #ff7901;
+
+    --card-background-color:
+        #071a2f;
+
+    --newsletter-background-color:
+        #05111f;
+
+    --button-background-color:
+        #071a2f;
+
+    /* Legacy navbar/search variables */
+
+    --nav-color:
+        #071a2f;
+
+    --nav-link-color:
+        #e6edf5;
+
+    --search-color:
+        #ff7901;
 }
