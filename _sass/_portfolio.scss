@@ -268,11 +268,6 @@ body {
         opacity 0.2s ease;
 }
 
-
-/* =========================================================
-   Mobile Menu Animation
-   ========================================================= */
-
 .portfolio-menu-toggle.is-open span:nth-child(1) {
     transform: translateY(6px) rotate(45deg);
 }
@@ -457,11 +452,6 @@ footer {
     align-self: flex-start;
 }
 
-
-/* =========================================================
-   Projects - Sidebar
-   ========================================================= */
-
 .projects-index-card {
     position: static;
 
@@ -539,11 +529,6 @@ footer {
 
     line-height: 1.4;
 }
-
-
-/* =========================================================
-   Projects - Main Content
-   ========================================================= */
 
 .projects-section {
     width: 100%;
@@ -678,11 +663,6 @@ footer {
     align-self: flex-start;
 }
 
-
-/* =========================================================
-   Certifications - Sidebar
-   ========================================================= */
-
 .certifications-index-card {
     position: static;
 
@@ -752,11 +732,6 @@ footer {
 
     line-height: 1.4;
 }
-
-
-/* =========================================================
-   Certifications - Main Content
-   ========================================================= */
 
 .certifications-section {
     width: 100%;
@@ -908,11 +883,6 @@ footer {
     align-self: flex-start;
 }
 
-
-/* =========================================================
-   Courses - Sidebar
-   ========================================================= */
-
 .courses-index-card {
     position: static;
 
@@ -982,11 +952,6 @@ footer {
 
     line-height: 1.4;
 }
-
-
-/* =========================================================
-   Courses - Main Content
-   ========================================================= */
 
 .courses-section {
     width: 100%;
@@ -1233,7 +1198,7 @@ footer {
 
 
 /* =========================================================
-   Responsive
+   Responsive - Tablet / Mobile
    ========================================================= */
 
 @media (max-width: 991px) {
@@ -1317,24 +1282,80 @@ footer {
         box-sizing: border-box;
     }
 
+    /* Better mobile text contrast */
+
+    .card-title,
+    .project-title,
+    .certification-title,
+    .course-title {
+        color: #ffffff !important;
+    }
+
+    .project-summary,
+    .certification-summary,
+    .course-summary {
+        color: #edf3f9 !important;
+    }
+
+    .project-description,
+    .certification-description,
+    .course-description {
+        color: #dbe6f0 !important;
+    }
+
+    .project-date,
+    .certification-date,
+    .course-date {
+        color: #c0cfde !important;
+    }
+
+    .project-github a {
+        color: var(--portfolio-orange) !important;
+    }
+
+
+    /* Hide left sidebar on mobile */
 
     .projects-sidebar-column,
     .certifications-sidebar-column,
     .courses-sidebar-column {
-        margin-bottom: 24px;
+        display: none !important;
     }
 
-    .projects-index-card,
-    .certifications-index-card,
-    .courses-index-card {
-        position: static;
+    .projects-main-column,
+    .certifications-main-column,
+    .courses-main-column {
+        width: 100%;
     }
+
+    .projects-main-column,
+    .certifications-main-column,
+    .courses-main-column {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+
+    /* Main content fills mobile width */
+
+    .projects-page .col-lg-8,
+    .certifications-page .col-lg-8,
+    .courses-page .col-lg-8 {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+
+    /* Entries */
 
     .project-entry-header,
     .certification-entry-header,
     .course-entry-header {
         align-items: flex-start;
+
         flex-direction: column;
+
         gap: 6px;
     }
 
@@ -1352,7 +1373,6 @@ footer {
     .certification-image-wrapper,
     .course-image-wrapper {
         flex: 0 0 auto;
-
         width: 100%;
     }
 
@@ -1365,6 +1385,10 @@ footer {
 }
 
 
+/* =========================================================
+   Responsive - Small Mobile
+   ========================================================= */
+
 @media (max-width: 576px) {
 
     .portfolio-navbar-inner {
@@ -1376,6 +1400,67 @@ footer {
         padding-right: 14px;
     }
 
+
+    /* Better contrast on small screens */
+
+    body {
+        color: #edf3f9;
+    }
+
+    .card {
+        color: #edf3f9;
+    }
+
+    .card-title {
+        color: #ffffff !important;
+    }
+
+    .project-title,
+    .certification-title,
+    .course-title {
+        color: #ffffff !important;
+        font-size: 22px;
+    }
+
+    .project-summary,
+    .certification-summary,
+    .course-summary {
+        color: #edf3f9 !important;
+        font-size: 15px;
+    }
+
+    .project-description,
+    .certification-description,
+    .course-description {
+        color: #dbe6f0 !important;
+        font-size: 14px;
+    }
+
+    .project-date,
+    .certification-date,
+    .course-date {
+        color: #c6d5e3 !important;
+    }
+
+
+    /* Hide sidebars completely */
+
+    .projects-sidebar-column,
+    .certifications-sidebar-column,
+    .courses-sidebar-column {
+        display: none !important;
+    }
+
+    .projects-main-column,
+    .certifications-main-column,
+    .courses-main-column {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        flex: 0 0 100% !important;
+    }
+
+
     .projects-page .col-lg-4,
     .projects-page .col-lg-8,
     .certifications-page .col-lg-4,
@@ -1386,10 +1471,42 @@ footer {
         padding-right: 10px;
     }
 
-    .projects-index-group + .projects-index-group {
-        margin-top: 20px;
-        padding-top: 16px;
+
+    /* Footer badge */
+
+    .built-by-badge {
+        left: 10px;
+        bottom: 10px;
+
+        gap: 4px;
+
+        padding: 3px 7px 3px 3px;
+
+        border-radius: 14px;
+
+        font-size: 8px !important;
     }
+
+    .built-by-badge img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .built-by-badge strong {
+        font-size: 8px !important;
+    }
+
+
+    /* Project / certification / course spacing */
+
+    .project-entry,
+    .certification-entry,
+    .course-entry {
+        padding: 18px 0;
+    }
+
+
+    /* Smaller sidebar-independent content */
 
     .project-index-item,
     .certification-index-item,
@@ -1397,41 +1514,31 @@ footer {
         padding: 8px 9px;
     }
 
-    .project-title,
-    .certification-title,
-    .course-title {
-        font-size: 22px;
+
+    /* Images */
+
+    .certification-image,
+    .course-image {
+        width: 110px;
+        height: 110px;
     }
 
-    .project-summary,
-    .certification-summary,
-    .course-summary {
-        font-size: 15px;
-    }
 
-    .project-description,
-    .certification-description,
-    .course-description {
-        font-size: 14px;
-    }
+    /* Popups */
 
     .image-popup {
         max-width: 96vw;
-
         max-height: 90vh;
-
         padding: 8px;
     }
 
     .image-popup-content {
         max-width: 94vw;
-
         max-height: 88vh;
     }
 
     .image-popup-image {
         max-width: 94vw;
-
         max-height: 88vh;
     }
 
