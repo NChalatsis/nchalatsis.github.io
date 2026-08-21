@@ -424,9 +424,7 @@ body {
 
 .certification-index-title {
     display: block;
-
     color: #ffffff !important;
-
     font-size: 14px;
     font-weight: 400;
     line-height: 1.4;
@@ -434,30 +432,29 @@ body {
 
 
 /* =========================================================
-   Certifications - Title Card
+   Certifications - Main Content
    ========================================================= */
 
-.certifications-title-card {
+.certifications-section {
     width: 100%;
-    margin: 0 0 24px;
-}
-
-.certifications-title-card .card-title {
     margin: 0;
 }
 
-
-/* =========================================================
-   Certifications - Individual Cards
-   ========================================================= */
-
-.certification-card {
+.certification-entry {
     width: 100%;
-    margin: 0 0 24px;
+    margin: 0;
+    padding: 22px 0;
+
+    border-bottom: 1px solid var(--portfolio-border);
 }
 
-.certification-card:last-child {
-    margin-bottom: 0;
+.certification-entry:first-of-type {
+    padding-top: 0;
+}
+
+.certification-entry:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
 }
 
 .certification-entry-layout {
