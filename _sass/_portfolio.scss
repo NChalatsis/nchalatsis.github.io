@@ -3,18 +3,34 @@
    Custom design layer
    ========================================================= */
 
+/* =========================================================
+   Variables
+   ========================================================= */
+
 :root {
     --portfolio-blue: #071a2f;
     --portfolio-blue-dark: #05111f;
     --portfolio-orange: #ff7901;
+
+    --portfolio-text: #e6edf5;
+    --portfolio-text-soft: #d9e3ee;
+    --portfolio-text-muted: #9fb0c2;
+
+    --portfolio-border: rgba(255, 255, 255, 0.10);
+    --portfolio-orange-border: rgba(255, 121, 1, 0.35);
 }
 
+
 /* =========================================================
-   Typography
+   General Typography
    ========================================================= */
 
 body {
-    color: #e6edf5;
+    color: var(--portfolio-text);
+}
+
+.card-title {
+    color: #ffffff !important;
 }
 
 .jumbotron-heading {
@@ -24,73 +40,17 @@ body {
 
 .jumbotron .lead {
     color: #ffffff !important;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.50);
 }
 
 .hero-description {
-    color: #e6edf5 !important;
+    color: var(--portfolio-text) !important;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
 }
 
-#recent-articles,
-#recent-projects {
-    color: #e6edf5;
-}
-
-#recent-articles h1,
-#recent-projects h1,
-.card-title {
-    color: #ffffff !important;
-}
-
-.project-card,
-.project-card p {
-    color: #d9e3ee !important;
-}
 
 /* =========================================================
-   About - Wider Education & Experience content
-   ========================================================= */
-
-.education-entry,
-.experience-entry {
-    display: flex;
-    align-items: flex-start;
-    width: 100%;
-    gap: 24px;
-}
-
-.education-entry .col-md-2,
-.experience-entry .col-md-2 {
-    flex: 0 0 110px;
-    max-width: 110px;
-}
-
-.education-entry .col-md-6,
-.experience-entry .col-md-6 {
-    flex: 1 1 auto;
-    max-width: none;
-    width: auto;
-}
-
-/* =========================================================
-   Education logo
-   ========================================================= */
-.education-logo,
-.experience-logo {
-    max-width: 100px;
-    max-height: 100px;
-    object-fit: contain;
-}
-
-.education-logo {
-    background: #ffffff;
-    padding: 8px;
-    border-radius: 10px;
-}
-
-/* =========================================================
-   About - Wide Data Entries
+   About - Education & Experience
    ========================================================= */
 
 .about-data-entry {
@@ -98,6 +58,7 @@ body {
     align-items: flex-start;
     width: 100%;
     gap: 28px;
+    margin: 0;
 }
 
 .about-data-logo {
@@ -132,7 +93,7 @@ body {
 
 
 /* =========================================================
-   Skills - Pill Tags
+   Skills
    ========================================================= */
 
 .skills-group {
@@ -160,12 +121,12 @@ body {
 
     padding: 7px 14px;
 
-    background: #071a2f !important;
-    border: 1px solid rgba(255, 121, 1, 0.35);
+    background: var(--portfolio-blue) !important;
+    border: 1px solid var(--portfolio-orange-border);
 
     border-radius: 999px !important;
 
-    color: #e6edf5 !important;
+    color: var(--portfolio-text) !important;
     font-size: 13px;
     font-weight: 500;
     line-height: 1;
@@ -185,8 +146,9 @@ body {
     border-color: rgba(255, 121, 1, 0.65);
 }
 
+
 /* =========================================================
-   Projects Page
+   Projects - Overall Layout
    ========================================================= */
 
 .projects-index-card {
@@ -194,105 +156,19 @@ body {
     top: 90px;
 }
 
-.projects-index-list {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+.projects-index-group {
+    width: 100%;
 }
-
-.project-index-item {
-    display: flex;
-    flex-direction: column;
-
-    padding: 10px 12px;
-
-    border-radius: 10px;
-
-    text-decoration: none !important;
-
-    background: rgba(7, 26, 47, 0.55);
-    border: 1px solid transparent;
-
-    transition:
-        background-color 0.2s ease,
-        border-color 0.2s ease,
-        transform 0.2s ease;
-}
-
-.project-index-item:hover {
-    background: rgba(11, 39, 69, 0.85);
-    border-color: rgba(255, 121, 1, 0.28);
-    transform: translateX(3px);
-}
-
-.project-index-title {
-    color: #ffffff !important;
-    font-size: 14px;
-    line-height: 1.35;
-}
-
-.project-index-type {
-    margin-top: 3px;
-    color: #9fb0c2;
-    font-size: 11px;
-}
-
-.projects-section {
-    margin-bottom: 25px;
-}
-
-.project-entry {
-    padding: 20px 0;
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.project-entry:last-child {
-    border-bottom: none;
-}
-
-.project-title {
-    margin-bottom: 6px;
-    color: #ffffff !important;
-}
-
-.project-date {
-    margin-bottom: 12px;
-    color: #9fb0c2;
-    font-size: 13px;
-}
-
-.project-summary {
-    color: #dbe7f5;
-    font-weight: 500;
-    line-height: 1.6;
-}
-
-.project-description {
-    color: #c7d3df;
-    line-height: 1.7;
-}
-
-@media (max-width: 991px) {
-
-    .projects-index-card {
-        position: static;
-    }
-
-}
-
-/* =========================================================
-   Projects - Sidebar Index
-   ========================================================= */
 
 .projects-index-group + .projects-index-group {
     margin-top: 24px;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    border-top: 1px solid var(--portfolio-border);
 }
 
 .projects-index-heading {
     margin: 0 0 10px;
+
     color: #ffffff !important;
     font-size: 18px;
     font-weight: 500;
@@ -301,26 +177,50 @@ body {
 .project-index-item {
     display: block;
 
+    width: 100%;
     padding: 8px 10px;
 
     border-radius: 9px;
 
-    color: #dbe7f5 !important;
+    color: var(--portfolio-text) !important;
     text-decoration: none !important;
 
     transition:
         background-color 0.2s ease,
+        border-color 0.2s ease,
         transform 0.2s ease;
 }
 
 .project-index-item:hover {
     background: rgba(7, 26, 47, 0.75);
+    border-color: var(--portfolio-orange-border);
     transform: translateX(3px);
 }
 
 .project-index-title {
+    display: block;
+
+    color: #ffffff !important;
     font-size: 14px;
     line-height: 1.4;
+}
+
+
+/* =========================================================
+   Projects - Main Content
+   ========================================================= */
+
+.projects-section {
+    margin-bottom: 25px;
+}
+
+.project-entry {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--portfolio-border);
+}
+
+.project-entry:last-child {
+    border-bottom: none;
 }
 
 .project-entry-header {
@@ -330,19 +230,53 @@ body {
     gap: 20px;
 }
 
+.project-title {
+    margin: 0 0 6px;
+    color: #ffffff !important;
+}
+
 .project-date {
     flex-shrink: 0;
-    color: #9fb0c2;
+
+    margin: 0;
+
+    color: var(--portfolio-text-muted);
     font-size: 13px;
+}
+
+.project-summary {
+    margin-bottom: 12px;
+
+    color: var(--portfolio-text-soft);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.project-description {
+    margin-bottom: 0;
+
+    color: #c7d3df;
+    line-height: 1.7;
 }
 
 .project-github {
     margin-top: 15px;
+    margin-bottom: 0;
 }
 
 .project-github a {
-    color: #ff7901 !important;
+    color: var(--portfolio-orange) !important;
+    text-decoration: none;
 }
+
+.project-github a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   Responsive
+   ========================================================= */
 
 @media (max-width: 991px) {
 
@@ -354,6 +288,50 @@ body {
         flex-direction: column;
         align-items: flex-start;
         gap: 4px;
+    }
+
+    .about-data-entry {
+        gap: 20px;
+    }
+
+    .about-data-logo {
+        flex: 0 0 100px;
+        width: 100px;
+    }
+
+    .education-logo,
+    .experience-logo {
+        width: 90px;
+        height: 90px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .about-data-entry {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .about-data-logo {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .education-logo,
+    .experience-logo {
+        width: 85px;
+        height: 85px;
+    }
+
+    .project-index-item {
+        padding: 8px;
+    }
+
+    .project-entry {
+        padding: 16px 0;
     }
 
 }
