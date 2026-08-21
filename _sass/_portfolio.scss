@@ -209,7 +209,6 @@ body {
 
     width: 100%;
     margin: 0;
-
     padding: 9px 11px;
 
     border: 1px solid transparent;
@@ -229,15 +228,12 @@ body {
 .project-index-item:hover {
     background: rgba(7, 26, 47, 0.75);
     border-color: var(--portfolio-orange-border);
-
     transform: translateX(3px);
 }
 
 .project-index-title {
     display: block;
-
     color: #ffffff !important;
-
     font-size: 14px;
     font-weight: 400;
     line-height: 1.4;
@@ -289,7 +285,6 @@ body {
     justify-content: space-between;
 
     width: 100%;
-
     gap: 24px;
 }
 
@@ -322,7 +317,6 @@ body {
 
     font-size: 16px;
     font-weight: 500;
-
     line-height: 1.6;
 }
 
@@ -342,9 +336,7 @@ body {
 
 .project-github a {
     color: var(--portfolio-orange) !important;
-
     font-size: 14px;
-
     text-decoration: none;
 }
 
@@ -408,7 +400,6 @@ body {
 
     width: 100%;
     margin: 0;
-
     padding: 9px 11px;
 
     border: 1px solid transparent;
@@ -428,7 +419,6 @@ body {
 .certification-index-item:hover {
     background: rgba(7, 26, 47, 0.75);
     border-color: var(--portfolio-orange-border);
-
     transform: translateX(3px);
 }
 
@@ -438,6 +428,7 @@ body {
     color: #ffffff !important;
 
     font-size: 14px;
+    font-weight: 400;
     line-height: 1.4;
 }
 
@@ -473,7 +464,6 @@ body {
     align-items: flex-start;
 
     width: 100%;
-
     gap: 28px;
 }
 
@@ -506,7 +496,6 @@ body {
     justify-content: space-between;
 
     width: 100%;
-
     gap: 20px;
 }
 
@@ -522,9 +511,7 @@ body {
 
 .certification-date {
     flex: 0 0 auto;
-
     color: var(--portfolio-text-muted);
-
     font-size: 13px;
 }
 
@@ -535,7 +522,6 @@ body {
 
     font-size: 16px;
     font-weight: 500;
-
     line-height: 1.6;
 }
 
@@ -592,7 +578,6 @@ body {
     }
 
 }
-
 
 @media (max-width: 576px) {
 
