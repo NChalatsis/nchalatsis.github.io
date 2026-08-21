@@ -1,4 +1,3 @@
-
 /* =========================================================
    Responsive / Mobile
    ========================================================= */
@@ -85,17 +84,26 @@
     .portfolio-nav-link {
         width: 100%;
 
-        padding: 13px 12px;
+        padding: 11px 12px;
 
-        font-size: 16px;
+        font-size: 15px;
 
         box-sizing: border-box;
     }
 
 
     /* -----------------------------------------------------
-       General Mobile Text Contrast
+       General Mobile Text Contrast + Smaller Typography
        ----------------------------------------------------- */
+
+    body {
+        font-size: 14px;
+        color: #edf3f9;
+    }
+
+    .card {
+        color: #edf3f9;
+    }
 
     .card-title,
     .project-title,
@@ -104,26 +112,43 @@
         color: #ffffff !important;
     }
 
+    .project-title,
+    .certification-title,
+    .course-title {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
     .project-summary,
     .certification-summary,
     .course-summary {
         color: #edf3f9 !important;
+
+        font-size: 14px;
+        line-height: 1.55;
     }
 
     .project-description,
     .certification-description,
     .course-description {
         color: #dbe6f0 !important;
+
+        font-size: 13px;
+        line-height: 1.6;
     }
 
     .project-date,
     .certification-date,
     .course-date {
         color: #c0cfde !important;
+
+        font-size: 12px;
     }
 
     .project-github a {
         color: var(--portfolio-orange) !important;
+
+        font-size: 13px;
     }
 
 
@@ -139,15 +164,26 @@
     }
 
     #profile-card .profile-name {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .about-data-content .experience-title {
         color: var(--portfolio-orange) !important;
+
+        font-size: 20px;
+        line-height: 1.3;
     }
 
     .about-data-content .experience-info {
         color: #edf3f9 !important;
+
+        font-size: 13px;
+    }
+
+    .about-data-content .experience-desc {
+        font-size: 13px;
+
+        line-height: 1.6;
     }
 
 
@@ -191,13 +227,7 @@
 
         flex-direction: column;
 
-        gap: 6px;
-    }
-
-    .project-title,
-    .certification-title,
-    .course-title {
-        font-size: 25px;
+        gap: 5px;
     }
 
     .certification-entry-layout,
@@ -216,6 +246,17 @@
     .course-image {
         width: 120px;
         height: 120px;
+    }
+
+
+    /* -----------------------------------------------------
+       Skills
+       ----------------------------------------------------- */
+
+    .skill-item {
+        padding: 6px 11px;
+
+        font-size: 12px;
     }
 
 }
@@ -240,12 +281,19 @@
         padding-right: 14px;
     }
 
+    .portfolio-nav-link {
+        padding: 10px 11px;
+
+        font-size: 14px;
+    }
+
 
     /* -----------------------------------------------------
-       Global Contrast
+       General Typography
        ----------------------------------------------------- */
 
     body {
+        font-size: 13px;
         color: #edf3f9;
     }
 
@@ -253,66 +301,96 @@
         color: #edf3f9;
     }
 
+    .card-title {
+        color: #ffffff !important;
 
-    /* -----------------------------------------------------
-       About - Orange Titles
-       ----------------------------------------------------- */
-
-    #profile-card .profile-name,
-    #profile-card h1,
-    #profile-card h2,
-    #profile-card h3 {
-        color: var(--portfolio-orange) !important;
-    }
-
-    #profile-card .profile-name {
-        font-size: 20px;
-    }
-
-    .about-data-content .experience-title {
-        color: var(--portfolio-orange) !important;
-        font-size: 21px;
-    }
-
-    .about-data-content .experience-info {
-        color: #edf3f9 !important;
+        font-size: 24px;
+        line-height: 1.25;
     }
 
 
     /* -----------------------------------------------------
-       Main Titles / Text
+       Main Content
        ----------------------------------------------------- */
 
     .project-title,
     .certification-title,
     .course-title {
         color: #ffffff !important;
-        font-size: 22px;
+
+        font-size: 20px;
+        line-height: 1.3;
     }
 
     .project-summary,
     .certification-summary,
     .course-summary {
         color: #edf3f9 !important;
-        font-size: 15px;
+
+        font-size: 13px;
+        line-height: 1.5;
     }
 
     .project-description,
     .certification-description,
     .course-description {
         color: #dbe6f0 !important;
-        font-size: 14px;
+
+        font-size: 12px;
+        line-height: 1.55;
     }
 
     .project-date,
     .certification-date,
     .course-date {
         color: #c6d5e3 !important;
+
+        font-size: 11px;
+    }
+
+    .project-github a {
+        font-size: 12px;
     }
 
 
     /* -----------------------------------------------------
-       Completely Hide Sidebars
+       About - Smaller Typography
+       ----------------------------------------------------- */
+
+    #profile-card .profile-name {
+        color: var(--portfolio-orange) !important;
+
+        font-size: 18px;
+        line-height: 1.25;
+    }
+
+    #profile-card .profile-bio {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .about-data-content .experience-title {
+        color: var(--portfolio-orange) !important;
+
+        font-size: 18px;
+        line-height: 1.3;
+    }
+
+    .about-data-content .experience-info {
+        color: #edf3f9 !important;
+
+        font-size: 12px;
+    }
+
+    .about-data-content .experience-desc {
+        font-size: 12px;
+
+        line-height: 1.55;
+    }
+
+
+    /* -----------------------------------------------------
+       Hide Sidebars Completely
        ----------------------------------------------------- */
 
     .projects-sidebar-column,
@@ -349,27 +427,28 @@
         left: 7px;
         bottom: 7px;
 
-        gap: 3px;
+        gap: 2px;
 
-        padding: 2px 5px 2px 2px;
+        padding: 2px 4px 2px 2px;
 
-        border-radius: 11px;
+        border-radius: 10px;
 
-        font-size: 6px !important;
-        line-height: 1.1;
+        font-size: 5px !important;
+
+        line-height: 1;
     }
 
     .built-by-badge img {
-        width: 14px;
-        height: 14px;
+        width: 12px;
+        height: 12px;
     }
 
     .built-by-badge span {
-        font-size: 6px !important;
+        font-size: 5px !important;
     }
 
     .built-by-badge strong {
-        font-size: 6px !important;
+        font-size: 5px !important;
     }
 
 
@@ -380,7 +459,18 @@
     .project-entry,
     .certification-entry,
     .course-entry {
-        padding: 18px 0;
+        padding: 16px 0;
+    }
+
+
+    /* -----------------------------------------------------
+       Skills
+       ----------------------------------------------------- */
+
+    .skill-item {
+        padding: 5px 10px;
+
+        font-size: 11px;
     }
 
 
@@ -390,8 +480,8 @@
 
     .certification-image,
     .course-image {
-        width: 110px;
-        height: 110px;
+        width: 105px;
+        height: 105px;
     }
 
 }
