@@ -147,18 +147,36 @@ body {
 .skills-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 9px;
 }
 
 .skill-item {
-    display: inline-block;
-    padding: 6px 11px;
-    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-    background: rgba(7, 26, 47, 0.9);
-    border: 1px solid rgba(255, 121, 1, 0.22);
+    padding: 7px 15px;
 
-    color: #dbe7f5;
+    background: rgba(7, 26, 47, 0.92);
+    border: 1px solid rgba(255, 121, 1, 0.28);
+
+    border-radius: 999px;
+
+    color: #e6edf5;
     font-size: 13px;
+    font-weight: 500;
     line-height: 1.2;
+
+    white-space: nowrap;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-2px);
+    background: rgba(11, 31, 56, 0.98);
+    border-color: rgba(255, 121, 1, 0.55);
 }
