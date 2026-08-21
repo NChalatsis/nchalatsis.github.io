@@ -1,1 +1,56 @@
 
+/* =========================================================
+   Footer
+   ========================================================= */
+
+footer {
+    background:
+        linear-gradient(
+            180deg,
+            #0a2038 0%,
+            #061426 100%
+        ) !important;
+
+    border-top: 1px solid rgba(255, 121, 1, 0.24);
+
+    box-shadow:
+        0 -8px 20px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+
+/* =========================================================
+   Mobile Built & Maintained Badge
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+    .built-by-badge {
+        left: 7px;
+        bottom: 7px;
+
+        gap: 3px;
+
+        padding: 2px 5px 2px 2px;
+
+        border-radius: 11px;
+
+        font-size: 6px !important;
+
+        line-height: 1.1;
+    }
+
+    .built-by-badge img {
+        width: 14px;
+        height: 14px;
+    }
+
+    .built-by-badge span {
+        font-size: 6px !important;
+    }
+
+    .built-by-badge strong {
+        font-size: 6px !important;
+    }
+
+}
