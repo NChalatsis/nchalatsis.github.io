@@ -200,6 +200,18 @@
        Skills
        ===================================================== */
 
+    /*
+       The Skills heading is a plain h1 inside the
+       second card of the left column.
+    */
+
+    #profile-card + .card h1 {
+        color: var(--portfolio-orange) !important;
+
+        font-size: 22px;
+        font-weight: 600;
+    }
+
     .skills-group-title {
         color: #ffffff !important;
     }
@@ -208,6 +220,28 @@
         color: #ffffff !important;
 
         font-size: 12px;
+    }
+
+
+    /* =====================================================
+       Social Icons + Location
+       ===================================================== */
+
+    /* GitHub and other social icons */
+    #profile-card .profile-links .social-link,
+    #profile-card .profile-links .social-link i {
+        color: var(--portfolio-orange) !important;
+    }
+
+    /* Greece / location */
+    #profile-card h6 a {
+        color: #edf3f9 !important;
+
+        font-size: 12px !important;
+    }
+
+    #profile-card h6 a i {
+        color: var(--portfolio-orange) !important;
     }
 
 
@@ -405,35 +439,20 @@
         line-height: 1.25;
     }
 
-    .project-github a {
+
+    /* =====================================================
+       Skills
+       ===================================================== */
+
+    #profile-card + .card h1 {
         color: var(--portfolio-orange) !important;
 
-        font-size: 11px;
-        font-weight: 500;
-    }
-
-
-    /* -----------------------------------------------------
-       Page titles
-       ----------------------------------------------------- */
-
-    .card-title {
-        color: #ffffff !important;
-
-        font-size: 21px;
+        font-size: 20px;
         font-weight: 600;
-        line-height: 1.25;
     }
-
-
-    /* -----------------------------------------------------
-       Skills
-       ----------------------------------------------------- */
 
     .skills-group-title {
         color: #ffffff !important;
-
-        font-size: 17px;
     }
 
     .skill-item {
@@ -443,9 +462,31 @@
     }
 
 
-    /* -----------------------------------------------------
+    /* =====================================================
+       Social Icons + Location
+       ===================================================== */
+
+    /* GitHub */
+    #profile-card .profile-links .social-link,
+    #profile-card .profile-links .social-link i {
+        color: var(--portfolio-orange) !important;
+    }
+
+    /* Greece / location */
+    #profile-card h6 a {
+        color: #edf3f9 !important;
+
+        font-size: 10px !important;
+    }
+
+    #profile-card h6 a i {
+        color: var(--portfolio-orange) !important;
+    }
+
+
+    /* =====================================================
        URLs / secondary links
-       ----------------------------------------------------- */
+       ===================================================== */
 
     .about-data-content a {
         color: var(--portfolio-orange) !important;
